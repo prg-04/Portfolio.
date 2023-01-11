@@ -214,6 +214,18 @@ $secondary: #172b4d;
     display: none;
   }
 
+  .socials {
+      margin-top: 1rem;
+
+      a {
+        font-size: 2em;
+
+        img {
+          height: 1.8rem;
+        }
+      }
+    }
+
   .header-sec {
     display: flex;
     justify-content: center;
@@ -256,18 +268,6 @@ $secondary: #172b4d;
     .description {
       margin: 2rem;
       padding: 0 10rem;
-    }
-
-    .socials {
-      margin-top: 1rem;
-
-      a {
-        font-size: 2em;
-
-        img {
-          height: 1.8rem;
-        }
-      }
     }
   }
 

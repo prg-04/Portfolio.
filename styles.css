@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +37,6 @@
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-
 .toggleMenu .menu {
   height: 4px;
   width: 30px;
@@ -47,7 +45,6 @@
   transition: all 0.5s ease-in-out;
   position: relative;
 }
-
 .toggleMenu .menu::before,
 .toggleMenu .menu::after {
   content: "";
@@ -58,11 +55,9 @@
   transition: all 0.5s ease-in-out;
   position: absolute;
 }
-
 .toggleMenu .menu::before {
   transform: translateY(-10px);
 }
-
 .toggleMenu .menu::after {
   transform: translateY(10px);
 }
@@ -84,7 +79,6 @@
   display: flex;
   align-items: center;
 }
-
 .socials a {
   margin: 0.8rem;
   font-size: 1.5em;
@@ -100,21 +94,17 @@
   width: 100%;
   background: #fff;
 }
-
 .navlinks.active ul {
   display: flex;
   margin: 2rem 2rem 0;
   flex-direction: column;
 }
-
 .navlinks.active ul li {
   margin: 1rem 0;
 }
-
 .navlinks.active ul li :hover {
   background-color: #ebf0ee;
 }
-
 .navlinks.active ul li a {
   border-radius: 10px;
   padding: 1rem;
@@ -132,13 +122,11 @@
 .scroll {
   margin-top: 3.7rem;
 }
-
 .scroll span {
   padding: 0.8rem;
   border-radius: 50%;
   border: 1px solid lightgray;
 }
-
 .scroll span i {
   color: #172b4d;
 }
@@ -152,11 +140,9 @@
   flex-direction: column;
   align-items: center;
 }
-
 .hero-intro .title {
   margin: 5rem 2rem 0;
 }
-
 .hero-intro .title h1 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -165,15 +151,12 @@
   color: #172b4d;
   text-align: center;
 }
-
 .hero-intro .title h1 span {
   color: #36b37f;
 }
-
 .hero-intro .description {
   margin: 1rem;
 }
-
 .hero-intro .description p {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -188,40 +171,41 @@
   .hero-intro .title {
     margin: 8rem 3rem 0;
   }
-
   .hero-intro .description {
     margin: 0 2rem;
   }
 }
-
 @media (min-width: 768px) {
   .navlinks {
     display: block;
   }
-
   .logo {
     display: none;
   }
-
   .toggleMenu {
     display: none;
   }
-
+  .socials {
+    margin-top: 1rem;
+  }
+  .socials a {
+    font-size: 2em;
+  }
+  .socials a img {
+    height: 1.8rem;
+  }
   .header-sec {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 72px;
   }
-
   .header-sec .navlinks {
     padding: 1rem;
   }
-
   .header-sec .navlinks ul {
     display: flex;
   }
-
   .header-sec .navlinks ul li {
     font-family: "Inter", sans-serif;
     font-weight: 600;
@@ -229,42 +213,24 @@
     line-height: 20px;
     margin: 0 1rem;
   }
-
   .header-sec .navlinks ul li :hover {
     background-color: #ebf0ee;
   }
-
   .header-sec .navlinks ul li a {
     padding: 0.8rem;
     border-radius: 5px;
     color: #172b4d;
   }
-
   .hero-intro {
     background-image: none;
   }
-
   .hero-intro .title {
     margin-top: 7rem;
   }
-
   .hero-intro .description {
     margin: 2rem;
     padding: 0 10rem;
   }
-
-  .hero-intro .socials {
-    margin-top: 1rem;
-  }
-
-  .hero-intro .socials a {
-    font-size: 2em;
-  }
-
-  .hero-intro .socials a img {
-    height: 1.8rem;
-  }
-
   .hero {
     background-image: url("../assets/header-bg.png");
     background-repeat: no-repeat;
@@ -272,4 +238,4 @@
     height: 100vh;
     width: 100%;
   }
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
