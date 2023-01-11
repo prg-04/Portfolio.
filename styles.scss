@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+$font-family: "Inter", sans-serif;
+$primary: #36b37f;
+$secondary: #172b4d;
+
+.header-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+.navlinks {
+  display: none;
+}
+
+.logo {
+  display: block;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #28352f;
+}
+
+.toggleMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+
+  .menu {
+    height: 4px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: $secondary;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+  }
+
+  .menu::before,
+  .menu::after {
+    content: "";
+    height: 4px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: $secondary;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+  }
+
+  .menu::before {
+    transform: translateY(-10px);
+  }
+
+  .menu::after {
+    transform: translateY(10px);
+  }
+}
+
+.toggleMenu.open .menu {
+  transform: translateX(-45px);
+  background-color: transparent;
+}
+
+.toggleMenu.open .menu::before {
+  transform: rotate(45deg) translate(30px, -30px);
+}
+
+.toggleMenu.open .menu::after {
+  transform: rotate(-45deg) translate(30px, 30px);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: 0.8rem;
+    font-size: 1.5em;
+    color: #505f79;
+  }
+}
+
+.navlinks.active {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+
+  ul {
+    display: flex;
+    margin: 2rem 2rem 0;
+    flex-direction: column;
+
+    li {
+      margin: 1rem 0;
+
+      :hover {
+        background-color: #ebf0ee;
+      }
+
+      a {
+        border-radius: 10px;
+        padding: 1rem;
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        color: #3a4a42;
+      }
+    }
+  }
+}
+
+.hero {
+  //   background-image: url("../assets/header-bg.png");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  height: 100vh;
+}
+
+.scroll {
+  margin-top: 3.7rem;
+
+  span {
+    padding: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+
+    i {
+      color: $secondary;
+    }
+  }
+}
+
+.hero-intro {
+  background-image: url("../assets/mob_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin: 5rem 2rem 0;
+
+    h1 {
+      font-family: $font-family;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      color: $secondary;
+      text-align: center;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+
+  .description {
+    margin: 1rem;
+
+    p {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      color: $secondary;
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero-intro {
+    .title {
+      margin: 8rem 3rem 0;
+    }
+
+    .description {
+      margin: 1rem 2rem;
+    }
+
+    .socials {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navlinks {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .toggleMenu {
+    display: none;
+  }
+
+  .socials {
+    margin-top: 1rem;
+
+    a {
+      font-size: 2em;
+
+      img {
+        height: 1.8rem;
+      }
+    }
+  }
+
+  .header-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+
+    .navlinks {
+      padding: 1rem;
+
+      ul {
+        display: flex;
+
+        li {
+          font-family: $font-family;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 20px;
+          margin: 0 1rem;
+
+          :hover {
+            background-color: #ebf0ee;
+          }
+
+          a {
+            padding: 0.8rem;
+            border-radius: 5px;
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-intro {
+    background-image: none;
+
+    .title {
+      margin-top: 7rem;
+    }
+
+    .description {
+      margin: 2rem;
+      padding: 0 10rem;
+    }
+  }
+
+  .hero {
+    background-image: url("../assets/header-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+}
