@@ -22,7 +22,6 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -100,12 +99,6 @@ To run the project, execute the following command:
 
 - code Portfolio_ .
 
-### Run tests
-
-To run tests, run the following command:
-
-- npx stylelint "\*_/_.{css,scss}"
-- npx eslint .
 
 ### Deployment
 
