@@ -111,6 +111,7 @@ $secondary: #172b4d;
 
     li {
       margin: 1rem 0;
+
       :hover {
         background-color: #ebf0ee;
       }
@@ -142,6 +143,7 @@ $secondary: #172b4d;
     padding: 0.8rem;
     border-radius: 50%;
     border: 1px solid lightgray;
+
     i {
       color: $secondary;
     }
@@ -244,6 +246,7 @@ $secondary: #172b4d;
           font-size: 15px;
           line-height: 20px;
           margin: 0 1rem;
+          
           :hover {
             background-color: #ebf0ee;
           }
