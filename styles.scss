@@ -29,7 +29,7 @@ $secondary: #172b4d;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  color: #28352F;
+  color: #28352f;
 }
 
 .toggleMenu {
@@ -41,6 +41,7 @@ $secondary: #172b4d;
   position: relative;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+
   .menu {
     height: 4px;
     width: 30px;
@@ -83,6 +84,17 @@ $secondary: #172b4d;
   transform: rotate(-45deg) translate(30px, 30px);
 }
 
+.socials {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: 0.8rem;
+    font-size: 1.5em;
+    color: #505f79;
+  }
+}
+
 .navlinks.active {
   display: block;
   position: absolute;
@@ -90,8 +102,8 @@ $secondary: #172b4d;
   left: 0;
   height: 100%;
   width: 100%;
-
   background: #fff;
+
   ul {
     display: flex;
     margin: 2rem 2rem 0;
@@ -102,6 +114,7 @@ $secondary: #172b4d;
       :hover {
         background-color: #ebf0ee;
       }
+
       a {
         border-radius: 10px;
         padding: 1rem;
@@ -122,7 +135,19 @@ $secondary: #172b4d;
   height: 100vh;
 }
 
-// hero-sec
+.scroll {
+  margin-top: 3.7rem;
+
+  span {
+    padding: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    i {
+      color: $secondary;
+    }
+  }
+}
+
 .hero-intro {
   background-image: url("../assets/mob_bg.png");
   background-repeat: no-repeat;
@@ -151,6 +176,7 @@ $secondary: #172b4d;
 
   .description {
     margin: 1rem;
+
     p {
       font-family: $font-family;
       font-style: normal;
@@ -159,29 +185,6 @@ $secondary: #172b4d;
       line-height: 28px;
       text-align: center;
       color: $secondary;
-    }
-  }
-
-  .socials {
-    display: flex;
-    align-items: center;
-
-    a {
-      margin: 0.8rem;
-      font-size: 1.5em;
-      color: #505f79;
-    }
-  }
-
-  .scroll {
-    margin-top: 3.7rem;
-    span {
-      padding: 0.8rem;
-      border-radius: 50%;
-      border: 1px solid lightgray;
-      i {
-        color: $secondary;
-      }
     }
   }
 }
