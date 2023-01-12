@@ -130,9 +130,6 @@ $secondary: #172b4d;
 }
 
 .hero {
-  //   background-image: url("../assets/header-bg.png");
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
   height: 100vh;
 }
 
@@ -191,6 +188,228 @@ $secondary: #172b4d;
   }
 }
 
+.ttl {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+
+  h2 {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: $secondary;
+  }
+}
+
+#about {
+  background-image: url("../assets/about-right.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .about-des {
+    margin-top: 5rem;
+    background-image: url("../assets/about-left.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100px;
+    width: 100%;
+    height: 333px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .about-ttl {
+      display: flex;
+      justify-content: center;
+
+      h2 {
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        color: $secondary;
+      }
+    }
+  }
+
+  .about-para {
+    width: 351px;
+    height: 333px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    button {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 24px;
+      color: #fff;
+      background-color: $primary;
+      padding: 0.8rem;
+      margin-top: 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        scale: 0.8;
+      }
+    }
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+
+    .about-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ebf0ee;
+      width: 359px;
+      height: 392px;
+      border-radius: 10px;
+      margin: 1rem;
+
+      img {
+        margin-top: 1rem;
+      }
+
+      h3 {
+        margin-top: 2rem;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $secondary;
+      }
+
+      ul {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          margin: 0.5rem;
+          background-color: #fff;
+          padding: 0.5rem;
+          border-radius: 5px;
+
+          a {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+#portfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .cards {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 474px;
+    gap: 2rem;
+    margin: 1rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #d0d9d4;
+      border-radius: 5px;
+
+      .img-hdr {
+        height: 232px;
+        width: 100%;
+        background: #ebf0ee;
+      }
+
+      .langs {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          margin-top: 2rem;
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          text-align: center;
+          color: #3a4a42;
+        }
+
+        .cd-links {
+          display: flex;
+          align-items: center;
+
+          li {
+            margin: 0.5rem;
+            border-radius: 5px;
+            background: #ebf0ee;
+            padding: 0.5rem;
+
+            a {
+              color: #3a4a42;
+            }
+          }
+        }
+
+        button {
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 24px;
+          margin-top: 1rem;
+          border-radius: 5px;
+          width: 122px;
+          height: 48px;
+          align-self: center;
+          color: #fff;
+          background: $primary;
+          border: none;
+
+          &:hover {
+            scale: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 480px) and (max-width: 767px) {
   .hero-intro {
     .title {
@@ -203,6 +422,30 @@ $secondary: #172b4d;
 
     .socials {
       margin-top: 2rem;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cd1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .cd2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  .about-des {
+    background-size: 120px;
+
+    .about-para {
+      width: 500px;
     }
   }
 }
@@ -284,5 +527,153 @@ $secondary: #172b4d;
     background-size: cover;
     height: 100vh;
     width: 100%;
+  }
+
+  #about {
+    background-image: url("../assets/about-right.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 150px;
+    height: 100vh;
+
+    .about-des {
+      background-image: url("../assets/about-left.png");
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: 180px;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .about-ttl {
+        display: flex;
+        align-self: center;
+        margin-top: 6rem;
+
+        h2 {
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 52px;
+          color: $secondary;
+        }
+      }
+
+      .about-para {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        margin: 2rem 4rem;
+        padding: 0 8rem;
+        width: 75%;
+
+        p {
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 32px;
+          color: $secondary;
+          text-align: center;
+        }
+
+        button {
+          margin-top: 2rem;
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 24px;
+          color: #fff;
+          background-color: $primary;
+          width: 159px;
+          height: 48px;
+          align-self: center;
+          border: none;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .experience {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 2rem 4rem;
+
+      .about-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ebf0ee;
+        width: 369px;
+        height: 352px;
+        border-radius: 10px;
+
+        h3 {
+          margin-top: 2rem;
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: $secondary;
+        }
+
+        ul {
+          margin-top: 1.5rem;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+
+          li {
+            margin: 0.5rem;
+            background-color: #fff;
+            padding: 0.5rem;
+            border-radius: 5px;
+
+            a {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .cards {
+      grid-column: 1/4;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      .card {
+        .langs {
+          h3 {
+            color: $secondary;
+          }
+
+          .cd-links {
+            li {
+              a {
+                color: $secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ttl {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      grid-column: 1 / 4;
+    }
   }
 }
