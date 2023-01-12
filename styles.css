@@ -271,6 +271,10 @@
   cursor: pointer;
 }
 
+#about .about-para button:hover {
+  scale: 0.8;
+}
+
 #about .experience {
   display: flex;
   flex-direction: column;
@@ -396,6 +400,10 @@
   color: #fff;
   background: #36b37f;
   border: none;
+}
+
+#portfolio .cards .card .langs button:hover {
+  scale: 0.8;
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
