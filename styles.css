@@ -184,6 +184,24 @@
   color: #172b4d;
 }
 
+.ttl {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+}
+
+.ttl h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: #172b4d;
+}
+
 #about {
   background-image: url("../assets/about-right.png");
   background-repeat: no-repeat;
@@ -212,7 +230,7 @@
   justify-content: center;
 }
 
-#about .about-des .about-ttl h1 {
+#about .about-des .about-ttl h2 {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -305,28 +323,12 @@
 }
 
 #portfolio {
-  display: flex;
-  flex-direction: column;
-}
-
-#portfolio .ttl {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.5rem;
-  padding: 1.5rem;
-}
-
-#portfolio .ttl h2 {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  text-align: center;
-  color: #172b4d;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 #portfolio .cards {
+  grid-column: 1/3;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 474px;
@@ -537,7 +539,7 @@
     margin-top: 6rem;
   }
 
-  #about .about-des .about-ttl h1 {
+  #about .about-des .about-ttl h2 {
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -627,7 +629,13 @@
     color: #36b37f;
   }
 
+  #portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   #portfolio .cards {
+    grid-column: 1/4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
