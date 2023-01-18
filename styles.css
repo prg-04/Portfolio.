@@ -737,4 +737,96 @@
     margin-top: 2rem;
     grid-column: 1/4;
   }
+  #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(../assets/contact2.png);
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: bottom left;
+  }
+  #contact .pri-text {
+    height: 650px;
+    background-image: url(../assets/illust-2.png);
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: bottom right;
+    margin-left: 2rem;
+    width: 40%;
+  }
+  #contact .pri-text .contact-para {
+    margin-top: 4rem;
+  }
+  #contact .form {
+    display: none;
+  }
+  #contact .form2 {
+    display: block;
+    width: 70%;
+    height: 500px;
+    background-image: url(../assets/contact.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: bottom right;
+  }
+  #contact .form2 fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    border: none;
+    width: 684px;
+    height: 330px;
+  }
+  #contact .form2 fieldset input {
+    padding: 0.8rem 0;
+  }
+  #contact .form2 fieldset input,
+#contact .form2 fieldset textarea {
+    width: 100%;
+    margin: 0.5rem;
+  }
+  #contact .form2 fieldset input:valid,
+#contact .form2 fieldset textarea:valid {
+    border-color: #10a510;
+  }
+  #contact .form2 fieldset input:focus,
+#contact .form2 fieldset textarea:focus {
+    outline: none;
+  }
+  #contact .form2 fieldset .firstN {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #contact .form2 fieldset .lastN {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #contact .form2 fieldset .email {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  #contact .form2 fieldset .msg {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  #contact .form2 fieldset .btn {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    width: 129px;
+    height: 48px;
+    align-self: center;
+    background: #36b37f;
+    border: none;
+    color: #fff;
+  }
+  #contact .form2 fieldset .btn:hover {
+    scale: 0.8;
+  }
+  .copyright .copyright-txt {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

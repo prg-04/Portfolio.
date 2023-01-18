@@ -856,7 +856,7 @@ $secondary: #172b4d;
       display: flex;
       justify-content: center;
       margin-top: 2rem;
-      grid-column: 1 / 4;
+      grid-column: 1/4;
     }
   }
 
@@ -914,7 +914,7 @@ $secondary: #172b4d;
           margin: 0.5rem;
 
           &:valid {
-            border-color: #10A510;
+            border-color: #10a510;
           }
 
           &:focus {
