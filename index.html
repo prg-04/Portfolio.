@@ -49,7 +49,7 @@
 						<a href=""><i class="fa-brands fa-linkedin-in"></i></a>
 					</li>
 					<li>
-						<a href=""><img src="/assets/Vector.png" alt="" /></a>
+						<a href=""><img src="../assets/Vector.png" alt="" /></a>
 					</li>
 					<li>
 						<a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -219,7 +219,7 @@
 				</div>
 			</div>
 		</section>
-		<footer id="contact">
+		<section id="contact">
 			<div class="pri-text">
 				<p class="contact-para">
 					I'm always interested in hearing about new projects, so if you'd like
@@ -227,44 +227,6 @@
 				</p>
 			</div>
 			<form action="https://formspree.io/f/xpznwejk" method="post" class="form">
-				<fieldset>
-					<label
-						><input
-							type="text"
-							name="fullname"
-							id="fullname"
-							placeholder="Full name"
-							required
-						/>
-					</label>
-
-					<label
-						><input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Email address"
-							required
-						/>
-					</label>
-					<label>
-						<textarea
-							name="msg"
-							id="msg"
-							cols="30"
-							rows="10"
-							placeholder="Enter text here"
-							required
-						></textarea>
-					</label>
-					<button class="btn" type="submit">Get in Touch</button>
-				</fieldset>
-			</form>
-			<form
-				action="https://formspree.io/f/xpznwejk"
-				method="post"
-				class="form2"
-			>
 				<fieldset>
 					<label class="firstN"
 						><input
@@ -284,6 +246,15 @@
 							required
 						/>
 					</label>
+					<label class="fullN"
+						><input
+							type="text"
+							name="fullname"
+							id="fullname"
+							placeholder="Full name"
+							required
+						/>
+					</label>
 
 					<label class="email"
 						><input
@@ -300,6 +271,8 @@
 							id="msg"
 							cols="30"
 							rows="10"
+							maxlength="500"
+							minlength="30"
 							placeholder="Enter text here"
 							required
 						></textarea>
@@ -307,11 +280,10 @@
 					<button class="btn" type="submit">Get in Touch</button>
 				</fieldset>
 			</form>
-			
-		</footer>
+		</section>
 
-	<footer id="copyright">
-		<div class="copyright">
+		<footer id="copyright">
+			<div class="copyright">
 				<ul class="socials">
 					<li>
 						<a href=""><i class="fa-brands fa-github"></i></a>
@@ -320,7 +292,7 @@
 						<a href=""><i class="fa-brands fa-linkedin-in"></i></a>
 					</li>
 					<li>
-						<a href=""><img src="/assets/Vector.png" alt="vector" /></a>
+						<a href=""><img src="../assets/Vector.png" alt="vector" /></a>
 					</li>
 					<li>
 						<a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -331,7 +303,7 @@
 				</ul>
 				<p class="copyright-txt">myemailhere@email.com</p>
 			</div>
-	</footer>
+		</footer>
 
 		<script src="main.js"></script>
 	</body>

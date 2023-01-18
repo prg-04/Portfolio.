@@ -330,24 +330,16 @@
 
 #contact {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  background-image: url(../assets/contact.png);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  height: 840px;
-}
-
-#contact .form2 {
-  display: none;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 #contact .pri-text {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 327px;
-  height: 363px;
+  align-items: center;
 }
 
 #contact .pri-text .contact-para {
@@ -360,33 +352,48 @@
   color: #172b4d;
 }
 
+#contact .form {
+  margin-top: 2rem;
+}
+
 #contact .form fieldset {
   display: flex;
   flex-direction: column;
-  width: 327px;
-  height: 330px;
+  justify-content: center;
   border: none;
+  margin: 0.5rem;
 }
 
-#contact .form fieldset input,
 #contact .form fieldset textarea {
   width: 100%;
-  margin: 0.6rem 0;
+}
+
+#contact .form fieldset textarea:valid {
+  border-color: #0caa0c;
+}
+
+#contact .form fieldset textarea:focus {
+  outline: none;
+}
+
+#contact .form fieldset .firstN,
+#contact .form fieldset .lastN,
+#contact .form fieldset #lastN,
+#contact .form fieldset #firstN {
+  display: none;
+}
+
+#contact .form fieldset input {
+  width: 95%;
+  margin: 0.5rem 0;
   padding: 0.5rem;
 }
 
-#contact .form fieldset input input,
-#contact .form fieldset textarea input {
-  padding: 0.7rem 0;
+#contact .form fieldset input:valid {
+  border-color: #0caa0c;
 }
 
-#contact .form fieldset input:valid,
-#contact .form fieldset textarea:valid {
-  border-color: #10a510;
-}
-
-#contact .form fieldset input:focus,
-#contact .form fieldset textarea:focus {
+#contact .form fieldset input:focus {
   outline: none;
 }
 
@@ -396,11 +403,14 @@
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
-  align-self: center;
-  background: #36b37f;
-  border: none;
+  width: 129px;
+  height: 48px;
+  background-color: #36b37f;
   color: #fff;
-  padding: 1rem;
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
 }
 
 #contact .form fieldset .btn:hover {
@@ -522,6 +532,49 @@
   }
 }
 
+@media screen and (min-width: 550px) {
+  #contact .form fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 0.7rem;
+  }
+
+  #contact .form fieldset .firstN,
+  #contact .form fieldset .lastN,
+  #contact .form fieldset #firstN,
+  #contact .form fieldset #lastN {
+    display: block;
+  }
+
+  #contact .form fieldset #email {
+    width: 97%;
+  }
+
+  #contact .form fieldset .fullN {
+    display: none;
+  }
+
+  #contact .form fieldset .firstN {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  #contact .form fieldset .lastN {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  #contact .form fieldset .email {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  #contact .form fieldset .msg {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+
 @media (min-width: 600px) and (max-width: 767px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -543,82 +596,6 @@
 
   .about-des .about-para {
     width: 500px;
-  }
-
-  #contact {
-    display: flex;
-    flex-direction: column;
-    background-image: url(../assets/contact2.png);
-    background-repeat: no-repeat;
-    background-size: 150px;
-    background-position: bottom left;
-  }
-
-  #contact .form {
-    display: none;
-  }
-
-  #contact .form2 {
-    display: block;
-  }
-
-  #contact .form2 fieldset {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.7rem;
-    border: none;
-  }
-
-  #contact .form2 fieldset input {
-    padding: 0.5rem 0;
-  }
-
-  #contact .form2 fieldset input,
-  #contact .form2 fieldset textarea {
-    width: 100%;
-  }
-
-  #contact .form2 fieldset input:valid,
-  #contact .form2 fieldset textarea:valid {
-    border-color: #10a510;
-  }
-
-  #contact .form2 fieldset .firstN {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  #contact .form2 fieldset .lastN {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-
-  #contact .form2 fieldset .email {
-    grid-column: 1/3;
-    grid-row: 2/3;
-  }
-
-  #contact .form2 fieldset .msg {
-    grid-column: 1/3;
-    grid-row: 3/4;
-  }
-
-  #contact .form2 fieldset .btn {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 24px;
-    width: 129px;
-    height: 48px;
-    align-self: center;
-    background: #36b37f;
-    border: none;
-    color: #fff;
-  }
-
-  #contact .form2 fieldset .btn:hover {
-    scale: 0.8;
   }
 }
 
@@ -850,7 +827,7 @@
   #contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     background-image: url(../assets/contact2.png);
     background-repeat: no-repeat;
     background-size: 130px;
@@ -858,25 +835,22 @@
   }
 
   #contact .pri-text {
-    height: 650px;
+    justify-content: start;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    width: 40%;
+    height: 600px;
     background-image: url(../assets/illust-2.png);
     background-repeat: no-repeat;
     background-size: 130px;
     background-position: bottom right;
-    margin-left: 2rem;
-    width: 40%;
   }
 
   #contact .pri-text .contact-para {
-    margin-top: 4rem;
+    text-align: center;
   }
 
   #contact .form {
-    display: none;
-  }
-
-  #contact .form2 {
-    display: block;
     width: 70%;
     height: 500px;
     background-image: url(../assets/contact.png);
@@ -885,71 +859,8 @@
     background-position: bottom right;
   }
 
-  #contact .form2 fieldset {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-    border: none;
-    width: 684px;
-    height: 330px;
-  }
-
-  #contact .form2 fieldset input {
-    padding: 0.8rem 0;
-  }
-
-  #contact .form2 fieldset input,
-  #contact .form2 fieldset textarea {
-    width: 100%;
-    margin: 0.5rem;
-  }
-
-  #contact .form2 fieldset input:valid,
-  #contact .form2 fieldset textarea:valid {
-    border-color: #10a510;
-  }
-
-  #contact .form2 fieldset input:focus,
-  #contact .form2 fieldset textarea:focus {
-    outline: none;
-  }
-
-  #contact .form2 fieldset .firstN {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  #contact .form2 fieldset .lastN {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-
-  #contact .form2 fieldset .email {
-    grid-column: 1/3;
-    grid-row: 2/3;
-  }
-
-  #contact .form2 fieldset .msg {
-    grid-column: 1/3;
-    grid-row: 3/4;
-  }
-
-  #contact .form2 fieldset .btn {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 24px;
-    width: 129px;
-    height: 48px;
-    align-self: center;
-    background: #36b37f;
-    border: none;
-    color: #fff;
-  }
-
-  #contact .form2 fieldset .btn:hover {
-    scale: 0.8;
+  #contact .form fieldset {
+    width: 80%;
   }
 
   .copyright .copyright-txt {
