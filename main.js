@@ -40,5 +40,7 @@ window.addEventListener('load', () => {
     hide3.setAttribute('disabled', 'disabled');
     hide.removeAttribute('disabled');
     hide2.removeAttribute('disabled');
+  } else {
+    removeEventListener('resize')
   }
 });
