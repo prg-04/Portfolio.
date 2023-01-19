@@ -15,18 +15,29 @@ toggle.addEventListener('click', () => {
   navlink.classList.toggle('active');
 });
 
-const hide = document.getElementById('firstN');
-const hide2 = document.getElementById('lastN');
+const hide = document.getElementById('firstname');
+const hide2 = document.getElementById('lastname');
 const hide3 = document.getElementById('fullname');
 
 window.addEventListener('resize', () => {
-  if (screen.width < 550) {
-    hide.setAttribute('disabled', '');
-    hide2.setAttribute('disabled', '');
-  } if (screen.width > 550) {
-    hide3.setAttribute('disabled', '');
-  } else {
+  if (screen.width <= 550) {
+    hide.setAttribute('disabled', 'disabled');
+    hide2.setAttribute('disabled', 'disabled');
     hide3.removeAttribute('disabled');
+  } else if (screen.width > 550) {
+    hide3.setAttribute('disabled', 'disabled');
+    hide.removeAttribute('disabled');
+    hide2.removeAttribute('disabled');
+  }
+});
+
+window.addEventListener('load', () => {
+  if (screen.width <= 550) {
+    hide.setAttribute('disabled', 'disabled');
+    hide2.setAttribute('disabled', 'disabled');
+    hide3.removeAttribute('disabled');
+  } else if (screen.width > 550) {
+    hide3.setAttribute('disabled', 'disabled');
     hide.removeAttribute('disabled');
     hide2.removeAttribute('disabled');
   }

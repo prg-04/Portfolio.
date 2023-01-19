@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfolio</title>
-		<script
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
 			src="https://kit.fontawesome.com/0ec53d8e70.js"
 			crossorigin="anonymous"
 		></script>
 		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<section class="hero">
+</head>
+<body>
+    <section class="hero">
 			<header class="header-sec">
 				<h1 class="logo">Welcome</h1>
 				<nav class="navlinks">
@@ -65,7 +65,7 @@
 			</section>
 		</section>
 
-		<section id="portfolio">
+        <section id="portfolio">
 			<div class="ttl">
 				<h2>My Recent Works</h2>
 			</div>
@@ -168,8 +168,7 @@
 				</div>
 			</div>
 		</section>
-
-		<section id="about">
+        <section id="about">
 			<div class="about-des">
 				<div class="about-ttl">
 					<h2>About me</h2>
@@ -219,7 +218,8 @@
 				</div>
 			</div>
 		</section>
-		<section id="contact">
+
+        <section id="contact">
 			<div class="pri-text">
 				<p class="contact-para">
 					I'm always interested in hearing about new projects, so if you'd like
@@ -231,8 +231,9 @@
 					<label class="firstN"
 						><input
 							type="text"
-							name="firstN"
-							id="firstN"
+							name="firstname"
+							id="firstname"
+							maxlength="30"
 							placeholder="First name"
 							required
 						/>
@@ -240,8 +241,9 @@
 					<label class="lastN">
 						<input
 							type="text"
-							name="lastN"
-							id="lastN"
+							name="lastname"
+							id="lastname"
+							maxlength="30"
 							placeholder="Last Name"
 							required
 						/>
@@ -251,6 +253,7 @@
 							type="text"
 							name="fullname"
 							id="fullname"
+							maxlength="30"
 							placeholder="Full name"
 							required
 						/>
@@ -281,8 +284,7 @@
 				</fieldset>
 			</form>
 		</section>
-
-		<footer id="copyright">
+        <footer id="copyright">
 			<div class="copyright">
 				<ul class="socials">
 					<li>
@@ -304,7 +306,8 @@
 				<p class="copyright-txt">myemailhere@email.com</p>
 			</div>
 		</footer>
+        
 
-		<script src="main.js"></script>
-	</body>
+    <script src="main.js"></script>
+</body>
 </html>

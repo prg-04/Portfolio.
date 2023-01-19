@@ -5,6 +5,12 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .header-sec {
@@ -190,6 +196,7 @@
   justify-content: center;
   margin-top: 2.5rem;
   padding: 1.5rem;
+  width: 98%;
 }
 
 .ttl h2 {
@@ -241,7 +248,7 @@
 }
 
 #about .about-des .about-para {
-  width: 351px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -361,11 +368,12 @@
   flex-direction: column;
   justify-content: center;
   border: none;
+  width: 90%;
   margin: 0.5rem;
 }
 
 #contact .form fieldset textarea {
-  width: 100%;
+  width: 95%;
 }
 
 #contact .form fieldset textarea:valid {
@@ -426,7 +434,6 @@
   grid-column: 1/3;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 474px;
   gap: 2rem;
   margin: 1rem;
 }
@@ -437,6 +444,7 @@
   align-items: center;
   border: 1px solid #d0d9d4;
   border-radius: 5px;
+  height: 474px;
 }
 
 #portfolio .cards .card .img-hdr {
@@ -546,8 +554,12 @@
     display: block;
   }
 
+  #contact .form fieldset input {
+    width: 90%;
+  }
+
   #contact .form fieldset #email {
-    width: 97%;
+    width: 95%;
   }
 
   #contact .form fieldset .fullN {
@@ -575,7 +587,7 @@
   }
 }
 
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 909px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -596,6 +608,34 @@
 
   .about-des .about-para {
     width: 500px;
+  }
+}
+
+@media screen and (min-width: 910px) {
+  #portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #portfolio .cards {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #portfolio .cards .card .langs h3 {
+    color: #172b4d;
+  }
+
+  #portfolio .cards .card .langs .cd-links li a {
+    color: #172b4d;
+  }
+
+  #portfolio .ttl {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    grid-column: 1/4;
   }
 }
 
@@ -796,32 +836,6 @@
 
   #about .experience .about-card ul li a {
     color: #36b37f;
-  }
-
-  #portfolio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #portfolio .cards {
-    grid-column: 1/4;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #portfolio .cards .card .langs h3 {
-    color: #172b4d;
-  }
-
-  #portfolio .cards .card .langs .cd-links li a {
-    color: #172b4d;
-  }
-
-  #portfolio .ttl {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    grid-column: 1/4;
   }
 
   #contact {
