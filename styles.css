@@ -5,6 +5,12 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .header-sec {
@@ -190,6 +196,7 @@
   justify-content: center;
   margin-top: 2.5rem;
   padding: 1.5rem;
+  width: 98%;
 }
 
 .ttl h2 {
@@ -210,10 +217,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 #about .about-des {
-  margin-top: 5rem;
+  margin-top: 3rem;
   background-image: url("../assets/about-left.png");
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -239,15 +247,14 @@
   color: #172b4d;
 }
 
-#about .about-para {
-  width: 351px;
-  height: 333px;
+#about .about-des .about-para {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#about .about-para p {
+#about .about-des .about-para p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -256,7 +263,7 @@
   text-align: center;
 }
 
-#about .about-para button {
+#about .about-des .about-para button {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -271,7 +278,7 @@
   cursor: pointer;
 }
 
-#about .about-para button:hover {
+#about .about-des .about-para button:hover {
   scale: 0.8;
 }
 
@@ -279,6 +286,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
   margin-top: 3rem;
 }
 
@@ -326,6 +335,96 @@
   color: #36b37f;
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+#contact .pri-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .pri-text .contact-para {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: #172b4d;
+}
+
+#contact .form {
+  margin-top: 2rem;
+}
+
+#contact .form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  width: 90%;
+  margin: 0.5rem;
+}
+
+#contact .form fieldset textarea {
+  width: 95%;
+}
+
+#contact .form fieldset textarea:valid {
+  border-color: #0caa0c;
+}
+
+#contact .form fieldset textarea:focus {
+  outline: none;
+}
+
+#contact .form fieldset .firstN,
+#contact .form fieldset .lastN,
+#contact .form fieldset #lastN,
+#contact .form fieldset #firstN {
+  display: none;
+}
+
+#contact .form fieldset input {
+  width: 95%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+#contact .form fieldset input:valid {
+  border-color: #0caa0c;
+}
+
+#contact .form fieldset input:focus {
+  outline: none;
+}
+
+#contact .form fieldset .btn {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  width: 129px;
+  height: 48px;
+  background-color: #36b37f;
+  color: #fff;
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+#contact .form fieldset .btn:hover {
+  scale: 0.8;
+}
+
 #portfolio {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -335,7 +434,6 @@
   grid-column: 1/3;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 474px;
   gap: 2rem;
   margin: 1rem;
 }
@@ -346,6 +444,7 @@
   align-items: center;
   border: 1px solid #d0d9d4;
   border-radius: 5px;
+  height: 474px;
 }
 
 #portfolio .cards .card .img-hdr {
@@ -406,6 +505,27 @@
   scale: 0.8;
 }
 
+#copyright {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+#copyright .copyright {
+  display: flex;
+  flex-direction: column;
+}
+
+#copyright .copyright .copyright-txt {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  align-self: center;
+  color: #172b4d;
+}
+
 @media (min-width: 480px) and (max-width: 767px) {
   .hero-intro .title {
     margin: 8rem 3rem 0;
@@ -420,7 +540,54 @@
   }
 }
 
-@media (min-width: 600px) and (max-width: 767px) {
+@media screen and (min-width: 550px) {
+  #contact .form fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 0.7rem;
+  }
+
+  #contact .form fieldset .firstN,
+  #contact .form fieldset .lastN,
+  #contact .form fieldset #firstN,
+  #contact .form fieldset #lastN {
+    display: block;
+  }
+
+  #contact .form fieldset input {
+    width: 90%;
+  }
+
+  #contact .form fieldset #email {
+    width: 95%;
+  }
+
+  #contact .form fieldset .fullN {
+    display: none;
+  }
+
+  #contact .form fieldset .firstN {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  #contact .form fieldset .lastN {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  #contact .form fieldset .email {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  #contact .form fieldset .msg {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 909px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -441,6 +608,34 @@
 
   .about-des .about-para {
     width: 500px;
+  }
+}
+
+@media screen and (min-width: 910px) {
+  #portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #portfolio .cards {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #portfolio .cards .card .langs h3 {
+    color: #172b4d;
+  }
+
+  #portfolio .cards .card .langs .cd-links li a {
+    color: #172b4d;
+  }
+
+  #portfolio .ttl {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    grid-column: 1/4;
   }
 }
 
@@ -536,7 +731,6 @@
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 180px;
-    height: 50%;
     display: flex;
     flex-direction: column;
   }
@@ -544,7 +738,7 @@
   #about .about-des .about-ttl {
     display: flex;
     align-self: center;
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
 
   #about .about-des .about-ttl h2 {
@@ -594,7 +788,8 @@
   #about .experience {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
     margin: 2rem 4rem;
   }
 
@@ -606,6 +801,13 @@
     width: 369px;
     height: 352px;
     border-radius: 10px;
+    margin: 0.5rem;
+  }
+
+  #about .experience .about-card img {
+    width: 250px;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 
   #about .experience .about-card h3 {
@@ -637,29 +839,46 @@
     color: #36b37f;
   }
 
-  #portfolio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #portfolio .cards {
-    grid-column: 1/4;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #portfolio .cards .card .langs h3 {
-    color: #172b4d;
-  }
-
-  #portfolio .cards .card .langs .cd-links li a {
-    color: #172b4d;
-  }
-
-  #portfolio .ttl {
+  #contact {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url(../assets/contact2.png);
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: bottom left;
+  }
+
+  #contact .pri-text {
+    justify-content: start;
+    margin-left: 2rem;
     margin-top: 2rem;
-    grid-column: 1/4;
+    width: 40%;
+    height: 600px;
+    background-image: url(../assets/illust-2.png);
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: bottom right;
+  }
+
+  #contact .pri-text .contact-para {
+    text-align: center;
+  }
+
+  #contact .form {
+    width: 70%;
+    height: 500px;
+    background-image: url(../assets/contact.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: bottom right;
+  }
+
+  #contact .form fieldset {
+    width: 80%;
+  }
+
+  .copyright .copyright-txt {
+    display: none;
   }
 }

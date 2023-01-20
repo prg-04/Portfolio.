@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfolio</title>
-		<script
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
 			src="https://kit.fontawesome.com/0ec53d8e70.js"
 			crossorigin="anonymous"
 		></script>
 		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<section class="hero">
+</head>
+<body>
+    <section class="hero">
 			<header class="header-sec">
 				<h1 class="logo">Welcome</h1>
 				<nav class="navlinks">
@@ -49,7 +49,7 @@
 						<a href=""><i class="fa-brands fa-linkedin-in"></i></a>
 					</li>
 					<li>
-						<a href=""><img src="/assets/Vector.png" alt="" /></a>
+						<a href=""><img src="../assets/Vector.png" alt="" /></a>
 					</li>
 					<li>
 						<a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -65,7 +65,7 @@
 			</section>
 		</section>
 
-		<section id="portfolio">
+        <section id="portfolio">
 			<div class="ttl">
 				<h2>My Recent Works</h2>
 			</div>
@@ -168,8 +168,7 @@
 				</div>
 			</div>
 		</section>
-
-		<section id="about">
+        <section id="about">
 			<div class="about-des">
 				<div class="about-ttl">
 					<h2>About me</h2>
@@ -185,8 +184,8 @@
 			</div>
 
 			<div class="experience">
-				<div class="about-card">
-					<img src="../assets/languages.png" alt="" />
+				<div class="about-card crd1">
+					<img src="../assets/languages.png" alt="Languages" />
 					<h3>Languages</h3>
 					<ul>
 						<li><a href="">Javascript</a></li>
@@ -195,8 +194,8 @@
 						<li><a href="">css</a></li>
 					</ul>
 				</div>
-				<div class="about-card">
-					<img src="../assets/frameworks.png" alt="" />
+				<div class="about-card crd2">
+					<img src="../assets/frameworks.png" alt="frameworks" />
 					<h3>Frameworks</h3>
 					<ul>
 						<li><a href="">Bootstrap</a></li>
@@ -206,8 +205,8 @@
 						<li><a href="">Selenium</a></li>
 					</ul>
 				</div>
-				<div class="about-card">
-					<img src="../assets/skills.png" alt="" />
+				<div class="about-card crd3">
+					<img src="../assets/skills.png" alt="skills" />
 					<h3>Skills</h3>
 					<ul>
 						<li><a href="">Codekit</a></li>
@@ -220,6 +219,95 @@
 			</div>
 		</section>
 
-		<script src="main.js"></script>
-	</body>
+        <section id="contact">
+			<div class="pri-text">
+				<p class="contact-para">
+					I'm always interested in hearing about new projects, so if you'd like
+					to chat please get in touch.
+				</p>
+			</div>
+			<form action="https://formspree.io/f/xpznwejk" method="post" class="form">
+				<fieldset>
+					<label class="firstN"
+						><input
+							type="text"
+							name="firstname"
+							id="firstname"
+							maxlength="30"
+							placeholder="First name"
+							required
+						/>
+					</label>
+					<label class="lastN">
+						<input
+							type="text"
+							name="lastname"
+							id="lastname"
+							maxlength="30"
+							placeholder="Last Name"
+							required
+						/>
+					</label>
+					<label class="fullN"
+						><input
+							type="text"
+							name="fullname"
+							id="fullname"
+							maxlength="30"
+							placeholder="Full name"
+							required
+						/>
+					</label>
+
+					<label class="email"
+						><input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Email address"
+							required
+						/>
+					</label>
+					<label class="msg">
+						<textarea
+							name="msg"
+							id="msg"
+							cols="30"
+							rows="10"
+							maxlength="500"
+							minlength="30"
+							placeholder="Enter text here"
+							required
+						></textarea>
+					</label>
+					<button class="btn" type="submit">Get in Touch</button>
+				</fieldset>
+			</form>
+		</section>
+        <footer id="copyright">
+			<div class="copyright">
+				<ul class="socials">
+					<li>
+						<a href=""><i class="fa-brands fa-github"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+					</li>
+					<li>
+						<a href=""><img src="../assets/Vector.png" alt="vector" /></a>
+					</li>
+					<li>
+						<a href=""><i class="fa-brands fa-twitter"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fa-solid fa-m"></i></a>
+					</li>
+				</ul>
+				<p class="copyright-txt">myemailhere@email.com</p>
+			</div>
+		</footer>
+        
+
+    <script src="main.js"></script>
+</body>
 </html>
