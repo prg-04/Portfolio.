@@ -280,6 +280,7 @@ body {
 
 #about .about-des .about-para button:hover {
   scale: 0.8;
+  background-color: #008552;
 }
 
 #about .experience {
@@ -423,6 +424,7 @@ body {
 
 #contact .form fieldset .btn:hover {
   scale: 0.8;
+  background-color: #008552;
 }
 
 #portfolio {
@@ -503,6 +505,7 @@ body {
 
 #portfolio .cards .card .langs button:hover {
   scale: 0.8;
+  background-color: #008552;
 }
 
 #copyright {
