@@ -21,26 +21,32 @@ const hide3 = document.getElementById('fullname');
 
 window.addEventListener('resize', () => {
   if (screen.width <= 550) {
-    hide.setAttribute('disabled', 'disabled');
-    hide2.setAttribute('disabled', 'disabled');
+    hide.setAttribute('disabled', '');
+    hide2.setAttribute('disabled', '');
     hide3.removeAttribute('disabled');
   } else if (screen.width > 550) {
-    hide3.setAttribute('disabled', 'disabled');
+    hide3.setAttribute('disabled', '');
     hide.removeAttribute('disabled');
     hide2.removeAttribute('disabled');
+  } else {
+    hide.removeAttribute('disabled');
+    hide2.removeAttribute('disabled');
+    hide3.removeAttribute('disabled');
   }
 });
 
 window.addEventListener('load', () => {
-  if (screen.width <= 550) {
-    hide.setAttribute('disabled', 'disabled');
-    hide2.setAttribute('disabled', 'disabled');
+  if (screen.availWidth <= 550) {
+    hide.setAttribute('disabled', '');
+    hide2.setAttribute('disabled', '');
     hide3.removeAttribute('disabled');
-  } else if (screen.width > 550) {
-    hide3.setAttribute('disabled', 'disabled');
+  } else if (screen.availWidth > 550) {
+    hide3.setAttribute('disabled', '');
     hide.removeAttribute('disabled');
     hide2.removeAttribute('disabled');
   } else {
-    removeEventListener('resize')
+    hide.removeAttribute('disabled');
+    hide2.removeAttribute('disabled');
+    hide3.removeAttribute('disabled');
   }
 });

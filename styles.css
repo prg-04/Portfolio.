@@ -788,7 +788,8 @@ body {
   #about .experience {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
     margin: 2rem 4rem;
   }
 
