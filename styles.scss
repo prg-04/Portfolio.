@@ -278,8 +278,18 @@ $secondary: #172b4d;
         border-radius: 4px;
         cursor: pointer;
 
+        &:active {
+          background: #36b37f;
+        }
+
         &:hover {
           scale: 0.8;
+          background-color: #008552;
+          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+        }
+
+        &:visited {
+          background: #008552;
         }
       }
     }
@@ -385,13 +395,6 @@ $secondary: #172b4d;
         }
       }
 
-      .firstN,
-      .lastN,
-      #lastN,
-      #firstN {
-        display: none;
-      }
-
       input {
         width: 95%;
         margin: 0.5rem 0;
@@ -421,8 +424,18 @@ $secondary: #172b4d;
         border-radius: 4px;
         margin-top: 1rem;
 
+        &:active {
+          background: #36b37f;
+        }
+
         &:hover {
           scale: 0.8;
+          background-color: #008552;
+          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+        }
+
+        &:visited {
+          background: #008552;
         }
       }
     }
@@ -446,7 +459,7 @@ $secondary: #172b4d;
       align-items: center;
       border: 1px solid #d0d9d4;
       border-radius: 5px;
-      height: 474px;
+      height: 500px;
 
       .img-hdr {
         height: 232px;
@@ -500,8 +513,18 @@ $secondary: #172b4d;
           background: $primary;
           border: none;
 
+          &:active {
+            background: #36b37f;
+          }
+
           &:hover {
             scale: 0.8;
+            background-color: #008552;
+            box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+          }
+
+          &:visited {
+            background: #008552;
           }
         }
       }
@@ -548,21 +571,24 @@ $secondary: #172b4d;
 
 @media screen and (min-width: 550px) {
   #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contact-para {
+      margin: 0 2rem;
+    }
+
     .form {
+      width: 70vw;
+
       fieldset {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0 0.7rem;
 
-        .firstN,
-        .lastN,
-        #firstN,
-        #lastN {
-          display: block;
-        }
-
         input {
-          width: 90%;
+          width: 95%;
         }
 
         #email {
@@ -570,16 +596,7 @@ $secondary: #172b4d;
         }
 
         .fullN {
-          display: none;
-        }
-
-        .firstN {
-          grid-column: 1/2;
-          grid-row: 1/2;
-        }
-
-        .lastN {
-          grid-column: 2/3;
+          grid-column: 1/3;
           grid-row: 1/2;
         }
 
@@ -598,25 +615,29 @@ $secondary: #172b4d;
 }
 
 @media (min-width: 600px) and (max-width: 909px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  #portfolio {
+    padding: 0 5rem;
 
-  .cd1 {
-    grid-row: 1/2;
-    grid-column: 1/2;
-  }
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  .cd2 {
-    grid-row: 1/2;
-    grid-column: 2/3;
-  }
+    .cd1 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
 
-  .about-des {
-    background-size: 120px;
+    .cd2 {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
 
-    .about-para {
-      width: 500px;
+    .about-des {
+      background-size: 120px;
+
+      .about-para {
+        width: 500px;
+      }
     }
   }
 }
@@ -625,6 +646,8 @@ $secondary: #172b4d;
   #portfolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    padding: 0 10rem;
 
     .cards {
       grid-column: 1/4;
@@ -654,6 +677,10 @@ $secondary: #172b4d;
       margin-top: 2rem;
       grid-column: 1/4;
     }
+  }
+
+  #contact {
+    margin-top: 8rem;
   }
 }
 
@@ -723,8 +750,9 @@ $secondary: #172b4d;
     }
 
     .description {
+      width: 800px;
       margin: 2rem;
-      padding: 0 10rem;
+      padding: 0 2rem;
     }
   }
 
@@ -732,7 +760,7 @@ $secondary: #172b4d;
     background-image: url("../assets/header-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
   }
 
@@ -742,6 +770,7 @@ $secondary: #172b4d;
     background-position: top right;
     background-size: 150px;
     height: 100vh;
+    margin-bottom: 3rem;
 
     .about-des {
       background-image: url("../assets/about-left.png");
@@ -772,7 +801,7 @@ $secondary: #172b4d;
         flex-direction: column;
         margin: 2rem 4rem;
         padding: 0 8rem;
-        width: 75%;
+        width: 80%;
 
         p {
           font-family: $font-family;
@@ -806,7 +835,8 @@ $secondary: #172b4d;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
+      padding: 5rem;
       margin: 2rem 4rem;
 
       .about-card {
@@ -864,33 +894,34 @@ $secondary: #172b4d;
     background-repeat: no-repeat;
     background-size: 130px;
     background-position: bottom left;
+    margin-top: 5rem;
 
     .pri-text {
       justify-content: start;
-      margin-left: 2rem;
-      margin-top: 2rem;
+      margin-left: 7rem;
       width: 40%;
       height: 600px;
       background-image: url(../assets/illust-2.png);
       background-repeat: no-repeat;
       background-size: 130px;
-      background-position: bottom right;
+      background-position: bottom center;
 
       .contact-para {
         text-align: center;
+        margin-top: 5rem;
       }
     }
 
     .form {
-      width: 70%;
-      height: 500px;
+      width: 65%;
+      height: 450px;
       background-image: url(../assets/contact.png);
       background-repeat: no-repeat;
       background-size: 100px;
       background-position: bottom right;
 
       fieldset {
-        width: 80%;
+        width: 70%;
       }
     }
   }
