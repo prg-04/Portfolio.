@@ -298,8 +298,7 @@ $secondary: #172b4d;
         }
 
         &:hover {
-          background-color: #008552;
-          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
         }
 
         &:visited {
@@ -443,8 +442,7 @@ $secondary: #172b4d;
         }
 
         &:hover {
-          background-color: #008552;
-          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
         }
 
         &:visited {
@@ -531,8 +529,7 @@ $secondary: #172b4d;
           }
 
           &:hover {
-            background-color: #008552;
-            box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+            box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
           }
 
           &:visited {
@@ -586,7 +583,7 @@ $secondary: #172b4d;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 12rem;
 
     .contact-para {
       margin: 0 2rem;

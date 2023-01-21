@@ -313,8 +313,7 @@ body {
 }
 
 #about .about-des .about-para button:hover {
-  background-color: #008552;
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
 }
 
 #about .about-des .about-para button:visited {
@@ -458,8 +457,7 @@ body {
 }
 
 #contact .form fieldset .btn:hover {
-  background-color: #008552;
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
 }
 
 #contact .form fieldset .btn:visited {
@@ -547,8 +545,7 @@ body {
 }
 
 #portfolio .cards .card .langs button:hover {
-  background-color: #008552;
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
 }
 
 #portfolio .cards .card .langs button:visited {
@@ -595,7 +592,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 12rem;
   }
 
   #contact .contact-para {
