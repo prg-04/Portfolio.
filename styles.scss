@@ -36,6 +36,21 @@ $secondary: #172b4d;
   font-size: 20px;
   line-height: 28px;
   color: #28352f;
+  animation-name: logo;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .toggleMenu {
