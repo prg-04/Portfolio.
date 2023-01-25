@@ -278,8 +278,18 @@ body {
   cursor: pointer;
 }
 
+#about .about-des .about-para button:active {
+  background: #36b37f;
+}
+
 #about .about-des .about-para button:hover {
   scale: 0.8;
+  background-color: #008552;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+#about .about-des .about-para button:visited {
+  background: #008552;
 }
 
 #about .experience {
@@ -414,8 +424,18 @@ body {
   margin-top: 1rem;
 }
 
+#contact .form fieldset .btn:active {
+  background: #36b37f;
+}
+
 #contact .form fieldset .btn:hover {
   scale: 0.8;
+  background-color: #008552;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+#contact .form fieldset .btn:visited {
+  background: #008552;
 }
 
 #portfolio {
@@ -437,7 +457,7 @@ body {
   align-items: center;
   border: 1px solid #d0d9d4;
   border-radius: 5px;
-  height: 474px;
+  height: 500px;
 }
 
 #portfolio .cards .card .img-hdr {
@@ -494,8 +514,18 @@ body {
   border: none;
 }
 
+#portfolio .cards .card .langs button:active {
+  background: #36b37f;
+}
+
 #portfolio .cards .card .langs button:hover {
   scale: 0.8;
+  background-color: #008552;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+#portfolio .cards .card .langs button:visited {
+  background: #008552;
 }
 
 #copyright {
@@ -534,6 +564,20 @@ body {
 }
 
 @media screen and (min-width: 550px) {
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact .contact-para {
+    margin: 0 2rem;
+  }
+
+  #contact .form {
+    width: 70vw;
+  }
+
   #contact .form fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -565,25 +609,29 @@ body {
 }
 
 @media (min-width: 600px) and (max-width: 909px) {
-  .cards {
+  #portfolio {
+    padding: 0 5rem;
+  }
+
+  #portfolio .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cd1 {
+  #portfolio .cd1 {
     grid-row: 1/2;
     grid-column: 1/2;
   }
 
-  .cd2 {
+  #portfolio .cd2 {
     grid-row: 1/2;
     grid-column: 2/3;
   }
 
-  .about-des {
+  #portfolio .about-des {
     background-size: 120px;
   }
 
-  .about-des .about-para {
+  #portfolio .about-des .about-para {
     width: 500px;
   }
 }
@@ -592,6 +640,8 @@ body {
   #portfolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    padding: 0 10rem;
   }
 
   #portfolio .cards {
@@ -613,6 +663,10 @@ body {
     justify-content: center;
     margin-top: 2rem;
     grid-column: 1/4;
+  }
+
+  #contact {
+    margin-top: 8rem;
   }
 }
 
@@ -683,15 +737,16 @@ body {
   }
 
   .hero-intro .description {
+    width: 800px;
     margin: 2rem;
-    padding: 0 10rem;
+    padding: 0 2rem;
   }
 
   .hero {
     background-image: url("../assets/header-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
   }
 
@@ -701,6 +756,7 @@ body {
     background-position: top right;
     background-size: 150px;
     height: 100vh;
+    margin-bottom: 3rem;
   }
 
   #about .about-des {
@@ -733,7 +789,7 @@ body {
     flex-direction: column;
     margin: 2rem 4rem;
     padding: 0 8rem;
-    width: 75%;
+    width: 80%;
   }
 
   #about .about-des .about-para p {
@@ -766,7 +822,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
+    padding: 5rem;
     margin: 2rem 4rem;
   }
 
@@ -824,27 +881,28 @@ body {
     background-repeat: no-repeat;
     background-size: 130px;
     background-position: bottom left;
+    margin-top: 5rem;
   }
 
   #contact .pri-text {
     justify-content: start;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    margin-left: 7rem;
     width: 40%;
     height: 600px;
     background-image: url(../assets/illust-2.png);
     background-repeat: no-repeat;
     background-size: 130px;
-    background-position: bottom right;
+    background-position: bottom center;
   }
 
   #contact .pri-text .contact-para {
     text-align: center;
+    margin-top: 5rem;
   }
 
   #contact .form {
-    width: 70%;
-    height: 500px;
+    width: 65%;
+    height: 450px;
     background-image: url(../assets/contact.png);
     background-repeat: no-repeat;
     background-size: 100px;
@@ -852,7 +910,7 @@ body {
   }
 
   #contact .form fieldset {
-    width: 80%;
+    width: 70%;
   }
 
   .copyright .copyright-txt {
