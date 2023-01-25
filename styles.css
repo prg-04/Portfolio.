@@ -384,13 +384,6 @@ body {
   outline: none;
 }
 
-#contact .form fieldset .firstN,
-#contact .form fieldset .lastN,
-#contact .form fieldset #lastN,
-#contact .form fieldset #firstN {
-  display: none;
-}
-
 #contact .form fieldset input {
   width: 95%;
   margin: 0.5rem 0;
@@ -547,15 +540,8 @@ body {
     gap: 0 0.7rem;
   }
 
-  #contact .form fieldset .firstN,
-  #contact .form fieldset .lastN,
-  #contact .form fieldset #firstN,
-  #contact .form fieldset #lastN {
-    display: block;
-  }
-
   #contact .form fieldset input {
-    width: 90%;
+    width: 95%;
   }
 
   #contact .form fieldset #email {
@@ -563,16 +549,7 @@ body {
   }
 
   #contact .form fieldset .fullN {
-    display: none;
-  }
-
-  #contact .form fieldset .firstN {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  #contact .form fieldset .lastN {
-    grid-column: 2/3;
+    grid-column: 1/3;
     grid-row: 1/2;
   }
 

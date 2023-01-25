@@ -385,13 +385,6 @@ $secondary: #172b4d;
         }
       }
 
-      .firstN,
-      .lastN,
-      #lastN,
-      #firstN {
-        display: none;
-      }
-
       input {
         width: 95%;
         margin: 0.5rem 0;
@@ -554,15 +547,8 @@ $secondary: #172b4d;
         grid-template-columns: repeat(2, 1fr);
         gap: 0 0.7rem;
 
-        .firstN,
-        .lastN,
-        #firstN,
-        #lastN {
-          display: block;
-        }
-
         input {
-          width: 90%;
+          width: 95%;
         }
 
         #email {
@@ -570,16 +556,7 @@ $secondary: #172b4d;
         }
 
         .fullN {
-          display: none;
-        }
-
-        .firstN {
-          grid-column: 1/2;
-          grid-row: 1/2;
-        }
-
-        .lastN {
-          grid-column: 2/3;
+          grid-column: 1/3;
           grid-row: 1/2;
         }
 
