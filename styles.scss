@@ -8,10 +8,10 @@
   box-sizing: border-box;
 }
 
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+// body {
+//   max-width: 100%;
+//   overflow-x: hidden;
+// }
 
 $font-family: "Inter", sans-serif;
 $primary: #36b37f;
@@ -36,6 +36,21 @@ $secondary: #172b4d;
   font-size: 20px;
   line-height: 28px;
   color: #28352f;
+  animation-name: logo;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .toggleMenu {
@@ -222,6 +237,7 @@ $secondary: #172b4d;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100%;
 
   .about-des {
     margin-top: 3rem;
@@ -230,7 +246,6 @@ $secondary: #172b4d;
     background-position: bottom left;
     background-size: 100px;
     width: 100%;
-    height: 333px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,9 +298,7 @@ $secondary: #172b4d;
         }
 
         &:hover {
-          scale: 0.8;
-          background-color: #008552;
-          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
         }
 
         &:visited {
@@ -308,10 +321,11 @@ $secondary: #172b4d;
       flex-direction: column;
       align-items: center;
       background-color: #ebf0ee;
-      width: 359px;
+      flex: 1;
       height: 392px;
       border-radius: 10px;
       margin: 1rem;
+      width: 324px;
 
       img {
         margin-top: 1rem;
@@ -429,9 +443,7 @@ $secondary: #172b4d;
         }
 
         &:hover {
-          scale: 0.8;
-          background-color: #008552;
-          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+          box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
         }
 
         &:visited {
@@ -445,6 +457,7 @@ $secondary: #172b4d;
 #portfolio {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding: 0 1.5rem;
 
   .cards {
     grid-column: 1/3;
@@ -518,9 +531,7 @@ $secondary: #172b4d;
           }
 
           &:hover {
-            scale: 0.8;
-            background-color: #008552;
-            box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+            box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
           }
 
           &:visited {
@@ -574,6 +585,7 @@ $secondary: #172b4d;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
 
     .contact-para {
       margin: 0 2rem;
@@ -614,9 +626,9 @@ $secondary: #172b4d;
   }
 }
 
-@media (min-width: 600px) and (max-width: 909px) {
+@media (min-width: 700px) and (max-width: 909px) {
   #portfolio {
-    padding: 0 5rem;
+    padding: 0 2.5rem;
 
     .cards {
       grid-template-columns: repeat(2, 1fr);
@@ -655,6 +667,8 @@ $secondary: #172b4d;
       grid-template-columns: repeat(3, 1fr);
 
       .card {
+        flex: 1;
+
         .langs {
           h3 {
             color: $secondary;
@@ -680,7 +694,7 @@ $secondary: #172b4d;
   }
 
   #contact {
-    margin-top: 8rem;
+    margin-top: 3rem;
   }
 }
 
@@ -769,8 +783,9 @@ $secondary: #172b4d;
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 150px;
-    height: 100vh;
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
 
     .about-des {
       background-image: url("../assets/about-left.png");
@@ -779,6 +794,7 @@ $secondary: #172b4d;
       background-size: 180px;
       display: flex;
       flex-direction: column;
+      height: 100%;
 
       .about-ttl {
         display: flex;
@@ -800,7 +816,6 @@ $secondary: #172b4d;
         align-self: center;
         flex-direction: column;
         margin: 2rem 4rem;
-        padding: 0 8rem;
         width: 80%;
 
         p {
@@ -834,8 +849,7 @@ $secondary: #172b4d;
     .experience {
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      gap: 1rem;
+      justify-content: space-around;
       padding: 5rem;
       margin: 2rem 4rem;
 
@@ -844,13 +858,12 @@ $secondary: #172b4d;
         flex-direction: column;
         align-items: center;
         background-color: #ebf0ee;
-        width: 369px;
-        height: 352px;
+        height: 372px;
         border-radius: 10px;
         margin: 0.5rem;
 
         img {
-          width: 250px;
+          width: 200px;
           object-fit: contain;
         }
 
@@ -894,7 +907,7 @@ $secondary: #172b4d;
     background-repeat: no-repeat;
     background-size: 130px;
     background-position: bottom left;
-    margin-top: 5rem;
+    margin-top: 3rem;
 
     .pri-text {
       justify-content: start;
