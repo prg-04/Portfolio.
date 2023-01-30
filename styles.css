@@ -175,7 +175,7 @@
 }
 
 .hero-intro {
-  background-image: url("../assets/mob_bg.png");
+  background-image: url("/assets/mob_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;

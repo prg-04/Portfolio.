@@ -8,11 +8,6 @@
   box-sizing: border-box;
 }
 
-// body {
-//   max-width: 100%;
-//   overflow-x: hidden;
-// }
-
 $font-family: "Inter", sans-serif;
 $primary: #36b37f;
 $secondary: #172b4d;
@@ -169,7 +164,7 @@ $secondary: #172b4d;
 }
 
 .hero-intro {
-  background-image: url("../assets/mob_bg.png");
+  background-image: url("/assets/mob_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
