@@ -8,11 +8,6 @@
   box-sizing: border-box;
 }
 
-// body {
-//   max-width: 100%;
-//   overflow-x: hidden;
-// }
-
 $font-family: "Inter", sans-serif;
 $primary: #36b37f;
 $secondary: #172b4d;
@@ -169,7 +164,7 @@ $secondary: #172b4d;
 }
 
 .hero-intro {
-  background-image: url("../assets/mob_bg.png");
+  background-image: url("./assets/mob_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -229,7 +224,7 @@ $secondary: #172b4d;
 }
 
 #about {
-  background-image: url("../assets/about-right.png");
+  background-image: url("./assets/about-right.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 100px;
@@ -241,7 +236,7 @@ $secondary: #172b4d;
 
   .about-des {
     margin-top: 3rem;
-    background-image: url("../assets/about-left.png");
+    background-image: url("./assets/about-left.png");
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 100px;
@@ -771,7 +766,7 @@ $secondary: #172b4d;
   }
 
   .hero {
-    background-image: url("../assets/header-bg.png");
+    background-image: url("./assets/header-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 120vh;
@@ -779,7 +774,7 @@ $secondary: #172b4d;
   }
 
   #about {
-    background-image: url("../assets/about-right.png");
+    background-image: url("./assets/about-right.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 150px;
@@ -788,7 +783,7 @@ $secondary: #172b4d;
     flex-direction: column;
 
     .about-des {
-      background-image: url("../assets/about-left.png");
+      background-image: url("./assets/about-left.png");
       background-repeat: no-repeat;
       background-position: bottom left;
       background-size: 180px;
@@ -903,7 +898,7 @@ $secondary: #172b4d;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-image: url(../assets/contact2.png);
+    background-image: url('./assets/contact2.png');
     background-repeat: no-repeat;
     background-size: 130px;
     background-position: bottom left;
@@ -914,7 +909,7 @@ $secondary: #172b4d;
       margin-left: 7rem;
       width: 40%;
       height: 600px;
-      background-image: url(../assets/illust-2.png);
+      background-image: url('./assets/illust-2.png');
       background-repeat: no-repeat;
       background-size: 130px;
       background-position: bottom center;
@@ -928,7 +923,7 @@ $secondary: #172b4d;
     .form {
       width: 65%;
       height: 450px;
-      background-image: url(../assets/contact.png);
+      background-image: url('./assets/contact.png');
       background-repeat: no-repeat;
       background-size: 100px;
       background-position: bottom right;

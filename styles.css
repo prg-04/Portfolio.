@@ -175,7 +175,7 @@
 }
 
 .hero-intro {
-  background-image: url("../assets/mob_bg.png");
+  background-image: url("./assets/mob_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -235,7 +235,7 @@
 }
 
 #about {
-  background-image: url("../assets/about-right.png");
+  background-image: url("./assets/about-right.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 100px;
@@ -248,7 +248,7 @@
 
 #about .about-des {
   margin-top: 3rem;
-  background-image: url("../assets/about-left.png");
+  background-image: url("./assets/about-left.png");
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 100px;
@@ -769,7 +769,7 @@
   }
 
   .hero {
-    background-image: url("../assets/header-bg.png");
+    background-image: url("./assets/header-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 120vh;
@@ -777,7 +777,7 @@
   }
 
   #about {
-    background-image: url("../assets/about-right.png");
+    background-image: url("./assets/about-right.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 150px;
@@ -787,7 +787,7 @@
   }
 
   #about .about-des {
-    background-image: url("../assets/about-left.png");
+    background-image: url("./assets/about-left.png");
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 180px;
@@ -902,7 +902,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-image: url(../assets/contact2.png);
+    background-image: url("./assets/contact2.png");
     background-repeat: no-repeat;
     background-size: 130px;
     background-position: bottom left;
@@ -914,7 +914,7 @@
     margin-left: 7rem;
     width: 40%;
     height: 600px;
-    background-image: url(../assets/illust-2.png);
+    background-image: url("./assets/illust-2.png");
     background-repeat: no-repeat;
     background-size: 130px;
     background-position: bottom center;
@@ -928,7 +928,7 @@
   #contact .form {
     width: 65%;
     height: 450px;
-    background-image: url(../assets/contact.png);
+    background-image: url("./assets/contact.png");
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: bottom right;
