@@ -14,4 +14,3 @@ toggle.addEventListener('click', () => {
 
   navlink.classList.toggle('active');
 });
-
