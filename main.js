@@ -1,6 +1,3 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable no-tabs */
-/* eslint-disable prefer-destructuring */
 const toggle = document.querySelector('.toggleMenu');
 const navlink = document.querySelector('.navlinks');
 let menuOpen = false;
