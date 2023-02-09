@@ -86,14 +86,16 @@ $secondary: #172b4d;
     transform: translateY(10px);
   }
 }
-// Add classes below this
+
 .toggleMenu.open .menu {
   transform: translateX(-45px);
   background-color: transparent;
 }
+
 .toggleMenu.open .menu::before {
   transform: rotate(45deg) translate(30px, -30px);
 }
+
 .toggleMenu.open .menu::after {
   transform: rotate(-45deg) translate(30px, 30px);
 }
