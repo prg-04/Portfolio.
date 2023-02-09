@@ -208,6 +208,7 @@ poptext.appendChild(popHead);
 
 const ul = createUl(popupData[0].classes[6]);
 const lists = createLists(popupData[0].lists);
+
 // eslint-disable-next-line array-callback-return
 lists.map((item) => {
   if (
