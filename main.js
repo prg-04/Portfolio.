@@ -142,7 +142,6 @@ const h2 = createH2(cardsData[0].heading);
 title.appendChild(h2);
 work.appendChild(title);
 
-// Add the code here
 function createCard(arr) {
   const card = arr.map((elem) => {
     const card = createDiv(elem);
