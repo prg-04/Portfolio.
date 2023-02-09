@@ -142,29 +142,7 @@ const h2 = createH2(cardsData[0].heading);
 title.appendChild(h2);
 work.appendChild(title);
 
-function createCard(arr) {
-  const card = arr.map((elem) => {
-    const card = createDiv(elem);
-    const div = createDiv(cardsData[1].class[0]);
-    const div2 = createDiv(cardsData[1].class[1]);
-    const h3 = createH3(cardsData[1].heading[0]);
-    const h3m = createH3(cardsData[1].heading[1]);
-    const ul = createUl(cardsData[1].listcls);
-    const lists = createLists(cardsData[1].lists);
-    lists.map((list) => ul.appendChild(list));
-    const btn = createBtn(cardsData[1].btn);
-    btn.className = cardsData[1].btnCls;
-
-    card.appendChild(div);
-    div2.appendChild(h3);
-    div2.appendChild(h3m);
-    div2.appendChild(ul);
-    div2.appendChild(btn);
-    card.appendChild(div2);
-    return card;
-  });
-  return card;
-}
+// Add the code here
 
 const cdContainer = createDiv(cardsData[0].class2);
 const cards = createCard(cardsData[1].divCls);
