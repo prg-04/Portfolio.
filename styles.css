@@ -240,7 +240,15 @@
   position: relative;
   z-index: 10;
   top: -2.3rem;
-  left: 70%;
+  left: 60%;
+}
+#contact .form .fieldset .input-grp .valid {
+  color: green;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  top: -2.3rem;
+  left: 65%;
 }
 #contact .form .fieldset textarea {
   width: 95%;

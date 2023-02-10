@@ -129,7 +129,7 @@
 					to chat please get in touch.
 				</p>
 			</div>
-			<form action="https://formspree.io/f/xpznwejk" method="post" class="form">
+			<form action="https://formspree.io/f/xpznwejk" method="post" id="form" class="form">
 				<fieldset class="fieldset">
 					<div class="input-grp">
 						<label class="fullN"
@@ -139,10 +139,12 @@
 								id="fullname"
 								maxlength="30"
 								placeholder="Full name"
+								onkeyup="validateFullName()"
 								required
 							/>
 						</label>
-						<span class="err">Error Message!</span>
+						<span class="err fullNameError"></span>
+						<span class="fullNValid valid"></span>
 					</div>
 
 					<div class="input-grp">
@@ -152,10 +154,12 @@
 								name="email"
 								id="email"
 								placeholder="Email address"
+								onkeyup="validateEmail()"
 								required
 							/>
 						</label>
-						<span class="err">Error Message!</span>
+						<span class="err emailError"><i class="fa-regular fa-circle-check"></i></span>
+						<span class="emailValid valid"></span>
 					</div>
 					<div class="input-grp">
 						<label class="msg">
@@ -170,7 +174,8 @@
 								required
 							></textarea>
 						</label>
-						<span class="err">Error Message!</span>
+						<span class="err msgError"></span>
+						<span class="msgValid valid"></span>
 					</div>
 					<button class="btn" type="submit">Get in Touch</button>
 				</fieldset>
