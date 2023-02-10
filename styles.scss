@@ -266,35 +266,12 @@ $secondary: #172b4d;
       width: 90%;
       margin: 0.5rem;
 
-      .input-grp {
-        .err {
-          color: red;
-          font-size: 0.8rem;
-          position: relative;
-          z-index: 10;
-          top: -2.3rem;
-          left: 55%;
-        }
-
-        .valid {
-          color: green;
-          font-size: 0.8rem;
-          position: relative;
-          z-index: 10;
-          right: 10%;
-        }
-
-        .msgError {
-          left: 50%;
-        }
-
-        .msgValid {
-          top: -1rem;
-        }
-      }
-
       textarea {
         width: 95%;
+
+        &:valid {
+          border-color: #0caa0c;
+        }
 
         &:focus {
           outline: none;
@@ -306,13 +283,13 @@ $secondary: #172b4d;
         margin: 0.5rem 0;
         padding: 0.5rem;
 
+        &:valid {
+          border-color: #0caa0c;
+        }
+
         &:focus {
           outline: none;
         }
-      }
-
-      .submitErr {
-        align-self: center;
       }
 
       .btn {
@@ -771,12 +748,14 @@ $secondary: #172b4d;
   }
 
   .popup {
+    height: 100%;
+
     #popup {
       margin: 0 2rem;
 
       .popTtl {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 34px;
+        line-height: 44px;
       }
 
       .popimg {
@@ -790,6 +769,7 @@ $secondary: #172b4d;
         .popPara {
           font-size: 16px;
           line-height: 22px;
+          margin-bottom: 1rem;
         }
       }
     }
@@ -1123,6 +1103,7 @@ $secondary: #172b4d;
     position: fixed;
     top: 0;
     left: 0;
+    align-self: center;
 
     #popup {
       width: 750px;
@@ -1135,7 +1116,7 @@ $secondary: #172b4d;
         .imgDesk {
           display: block;
           width: 750px;
-          height: 450px;
+          height: 400px;
         }
       }
 
@@ -1195,7 +1176,7 @@ $secondary: #172b4d;
         .imgDesk {
           display: block;
           width: 100%;
-          height: 450px;
+          height: 400px;
         }
       }
 
@@ -1238,6 +1219,66 @@ $secondary: #172b4d;
 
 @media screen and (min-width: 1200px) {
   .popup {
+    left: 15%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .popup {
     left: 25%;
+    width: 920px;
+    height: 883px;
+
+    #popup {
+      width: 900px;
+
+      .popimg {
+        .imgMob {
+          display: none;
+        }
+
+        .imgDesk {
+          display: block;
+          width: 100%;
+          height: 400px;
+        }
+      }
+
+      .poptext {
+        .popHead {
+          width: 98%;
+          align-items: center;
+
+          .popTtl {
+            width: 55%;
+            font-size: 1.8rem;
+          }
+
+          .topBtns {
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+          }
+        }
+
+        .popLinks {
+          margin-top: 1rem;
+
+          .link {
+            display: block;
+          }
+        }
+
+        .popPara {
+          width: 97%;
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    &.open {
+      display: flex;
+    }
   }
 }

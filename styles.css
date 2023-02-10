@@ -260,33 +260,12 @@
   margin: 0.5rem;
 }
 
-#contact .form .fieldset .input-grp .err {
-  color: red;
-  font-size: 0.8rem;
-  position: relative;
-  z-index: 10;
-  top: -2.3rem;
-  left: 55%;
-}
-
-#contact .form .fieldset .input-grp .valid {
-  color: green;
-  font-size: 0.8rem;
-  position: relative;
-  z-index: 10;
-  right: 10%;
-}
-
-#contact .form .fieldset .input-grp .msgError {
-  left: 50%;
-}
-
-#contact .form .fieldset .input-grp .msgValid {
-  top: -1rem;
-}
-
 #contact .form .fieldset textarea {
   width: 95%;
+}
+
+#contact .form .fieldset textarea:valid {
+  border-color: #0caa0c;
 }
 
 #contact .form .fieldset textarea:focus {
@@ -299,12 +278,12 @@
   padding: 0.5rem;
 }
 
-#contact .form .fieldset input:focus {
-  outline: none;
+#contact .form .fieldset input:valid {
+  border-color: #0caa0c;
 }
 
-#contact .form .fieldset .submitErr {
-  align-self: center;
+#contact .form .fieldset input:focus {
+  outline: none;
 }
 
 #contact .form .fieldset .btn {
@@ -755,13 +734,17 @@
     grid-row: 3/4;
   }
 
+  .popup {
+    height: 100%;
+  }
+
   .popup #popup {
     margin: 0 2rem;
   }
 
   .popup #popup .popTtl {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 34px;
+    line-height: 44px;
   }
 
   .popup #popup .popimg .imgMob {
@@ -772,6 +755,7 @@
   .popup #popup .poptext .popPara {
     font-size: 16px;
     line-height: 22px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1095,6 +1079,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    align-self: center;
   }
 
   .popup #popup {
@@ -1108,7 +1093,7 @@
   .popup #popup .popimg .imgDesk {
     display: block;
     width: 750px;
-    height: 450px;
+    height: 400px;
   }
 
   .popup #popup .poptext .popHead {
@@ -1162,7 +1147,7 @@
   .popup #popup .popimg .imgDesk {
     display: block;
     width: 100%;
-    height: 450px;
+    height: 400px;
   }
 
   .popup #popup .poptext .popHead {
@@ -1198,6 +1183,62 @@
 
 @media screen and (min-width: 1200px) {
   .popup {
+    left: 15%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .popup {
     left: 25%;
+    width: 920px;
+    height: 883px;
+  }
+
+  .popup #popup {
+    width: 900px;
+  }
+
+  .popup #popup .popimg .imgMob {
+    display: none;
+  }
+
+  .popup #popup .popimg .imgDesk {
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
+
+  .popup #popup .poptext .popHead {
+    width: 98%;
+    align-items: center;
+  }
+
+  .popup #popup .poptext .popHead .popTtl {
+    width: 55%;
+    font-size: 1.8rem;
+  }
+
+  .popup #popup .poptext .popHead .topBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .popup #popup .poptext .popLinks {
+    margin-top: 1rem;
+  }
+
+  .popup #popup .poptext .popLinks .link {
+    display: block;
+  }
+
+  .popup #popup .poptext .popPara {
+    width: 97%;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .popup.open {
+    display: flex;
   }
 }
