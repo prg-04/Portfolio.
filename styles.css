@@ -260,12 +260,33 @@
   margin: 0.5rem;
 }
 
-#contact .form .fieldset textarea {
-  width: 95%;
+#contact .form .fieldset .input-grp .err {
+  color: red;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  top: -2.3rem;
+  left: 55%;
 }
 
-#contact .form .fieldset textarea:valid {
-  border-color: #0caa0c;
+#contact .form .fieldset .input-grp .valid {
+  color: green;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  right: 10%;
+}
+
+#contact .form .fieldset .input-grp .msgError {
+  left: 50%;
+}
+
+#contact .form .fieldset .input-grp .msgValid {
+  top: -1rem;
+}
+
+#contact .form .fieldset textarea {
+  width: 95%;
 }
 
 #contact .form .fieldset textarea:focus {
@@ -284,6 +305,11 @@
 
 #contact .form .fieldset input:focus {
   outline: none;
+}
+
+
+#contact .form .fieldset .submitErr {
+  align-self: center;
 }
 
 #contact .form .fieldset .btn {
@@ -733,11 +759,9 @@
     grid-column: 1/3;
     grid-row: 3/4;
   }
-
   .popup {
     height: 100%;
   }
-
   .popup #popup {
     margin: 0 2rem;
   }
@@ -1148,6 +1172,7 @@
     display: block;
     width: 100%;
     height: 400px;
+
   }
 
   .popup #popup .poptext .popHead {
@@ -1184,5 +1209,6 @@
 @media screen and (min-width: 1200px) {
   .popup {
     left: 15%;
+
   }
 }

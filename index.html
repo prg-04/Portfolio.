@@ -129,41 +129,58 @@
 					to chat please get in touch.
 				</p>
 			</div>
-			<form action="https://formspree.io/f/xpznwejk" method="post" class="form">
+			<form action="https://formspree.io/f/xpznwejk" method="post" id="form" class="form">
 				<fieldset class="fieldset">
-					<label class="fullN"
-						><input
-							type="text"
-							name="fullname"
-							id="fullname"
-							maxlength="30"
-							placeholder="Full name"
-							required
-						/>
-					</label>
+					<div class="input-grp">
+						<label class="fullN"
+							><input
+								type="text"
+								name="fullname"
+								id="fullname"
+								maxlength="30"
+								placeholder="Full name"
+								onkeyup="validateFullName()"
+								required
+							/>
+						</label>
+						<span class="err fullNameError"></span>
+						<span class="fullNValid valid"></span>
+					</div>
 
-					<label class="email"
-						><input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Email address"
-							required
-						/>
-					</label>
-					<label class="msg">
-						<textarea
-							name="msg"
-							id="msg"
-							cols="30"
-							rows="10"
-							maxlength="500"
-							minlength="30"
-							placeholder="Enter text here"
-							required
-						></textarea>
-					</label>
-					<button class="btn" type="submit">Get in Touch</button>
+
+					<div class="input-grp">
+						<label class="email"
+							><input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Email address"
+								onkeyup="validateEmail()"
+								required
+							/>
+						</label>
+						<span class="err emailError"><i class="fa-regular fa-circle-check"></i></span>
+						<span class="emailValid valid"></span>
+					</div>
+					<div class="input-grp">
+						<label class="msg">
+							<textarea
+								name="msg"
+								id="msg"
+								cols="30"
+								rows="10"
+								maxlength="500"
+								minlength="30"
+								onkeyup="validateMsg()"
+								placeholder="Enter text here"
+								required
+							></textarea>
+						</label>
+						<span class="err msgError"></span>
+						<span class="msgValid valid"></span>
+					</div>
+					<button id="submit" class="btn" type="submit">Get in Touch</button>
+					<span class="submitErr"></span>
 				</fieldset>
 			</form>
 		</section>

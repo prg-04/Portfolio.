@@ -21,6 +21,7 @@ const cardsData = [
   },
   {
     class: ['img-hdr', 'langs'],
+
     divClasses: [
       'card cd1',
       'card cd2',
@@ -32,6 +33,7 @@ const cardsData = [
     listClass: 'cd-links',
     heading: ['Multi-Post Stories', 'Gain+Glory'],
     technologies: ['Ruby on Rails', 'css', 'Javascript', 'html'],
+
     btn: 'See Project',
     btnCls: 'cardBtn',
   },
@@ -67,6 +69,7 @@ const popupData = [
       'Codepen',
     ],
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the release",
+
   },
 ];
 
@@ -148,6 +151,7 @@ function createCard(arr) {
     const ul = createUl(cardsData[1].listClass);
     const technologies = createLists(cardsData[1].technologies);
     technologies.map((list) => ul.appendChild(list));
+
     const btn = createBtn(cardsData[1].btn);
     btn.className = cardsData[1].btnCls;
     card.appendChild(div);
@@ -171,7 +175,6 @@ const modal = document.querySelector('.popup');
 const arr = popupData[0].classes;
 const [demo, src] = popupData[0].buttonText;
 const [gitpages, github] = popupData[0].buttonLinks;
-
 const [
   close,
   imgMob,
@@ -198,6 +201,7 @@ popImg.appendChild(img2);
 popDiv.appendChild(popImg);
 modal.appendChild(popDiv);
 
+
 const poptext = createDiv(popupData[0].divClasses[1]);
 const popHead = createDiv(popupData[0].divClasses[2]);
 const h2pop = createH2(popupData[0].h2);
@@ -216,6 +220,7 @@ popHead.appendChild(topBtnDiv);
 poptext.appendChild(popHead);
 
 const ul = createUl(popLinks);
+
 const technologies = createLists(popupData[0].technologies);
 
 technologies.map((item) => {
@@ -236,6 +241,7 @@ poptext.appendChild(txt);
 
 const bottomBtnDiv = createDiv(popupData[0].divClasses[4]);
 const btn3 = createBtn(popupData[0].buttonText[2]);
+
 btn3.className = seeLive;
 btn3.innerHTML = demo;
 bottomBtnDiv.appendChild(btn3);
@@ -282,6 +288,91 @@ source.forEach((item) => {
     window.location.href = github;
   });
 });
+
+const nameErr = document.querySelector('.fullNameError');
+const emailErr = document.querySelector('.emailError');
+const fullNValid = document.querySelector('.fullNValid');
+const emailValid = document.querySelector('.emailValid');
+const msgErr = document.querySelector('.msgError');
+const msgValid = document.querySelector('.msgValid');
+const submitErr = document.querySelector('.submitErr');
+const submit = document.getElementById('submit');
+
+function validateFullName() {
+  const fullName = document.getElementById('fullname').value;
+
+  if (fullName.length === 0) {
+    nameErr.innerHTML = 'Full name is required';
+    fullNValid.innerHTML = null;
+    return false;
+  }
+  if (!fullName.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+    nameErr.innerHTML = 'Enter second name';
+    fullNValid.innerHTML = null;
+    return false;
+  }
+  nameErr.innerHTML = null;
+  fullNValid.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+  return true;
+}
+
+function validateEmail() {
+  const email = document.getElementById('email').value;
+
+  if (email.length === 0) {
+    emailErr.innerHTML = 'Email is required';
+    emailValid.innerHTML = null;
+    return false;
+  }
+  if (email.match(/[A-Z]/g)) {
+    emailErr.innerHTML = 'Enter email in lowercase';
+    emailValid.innerHTML = null;
+    return false;
+  }
+  if (
+    !email.match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    )
+  ) {
+    emailErr.innerHTML = 'Email Invalid';
+    emailValid.innerHTML = null;
+    return false;
+  }
+  emailErr.innerHTML = null;
+  emailValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+}
+
+function validateMsg() {
+  const msg = document.getElementById('msg').value;
+  const required = 30;
+
+  const charLeft = required - msg.length;
+  if (charLeft > 0) {
+    msgErr.innerHTML = `${charLeft}more characters required`;
+    msgValid.innerHTML = null;
+    return false;
+  }
+  msgErr.innerHTML = null;
+  msgValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+}
+
+function formValidate() {
+  if (!validateFullName() || !validateEmail() || !validateMsg()) {
+    submitErr.style.display = 'block';
+    submitErr.style.color = 'red';
+    submitErr.innerHTML = 'Please fix error to submit';
+    setTimeout(() => {
+      submitErr.style.display = 'none';
+    }, 3000);
+    return false;
+  }
+  submitErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+}
+
+submit.addEventListener('click', () => formValidate());
 
 const navlinks = document.querySelectorAll('.link');
 
