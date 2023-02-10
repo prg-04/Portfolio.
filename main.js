@@ -379,14 +379,7 @@ const fullName = document.getElementById('fullname');
 const email = document.getElementById('email');
 const msg = document.getElementById('msg');
 
-storeData.addEventListener('input', () => {
-  const formData = {
-    fullName: fullName.value,
-    email: email.value,
-    msg: msg.value,
-  };
-  localStorage.setItem('userInfo', JSON.stringify(formData));
-});
+// Add Code here
 
 window.onload = () => {
   let savedData = localStorage.getItem('userInfo');
