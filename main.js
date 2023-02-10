@@ -287,108 +287,82 @@ source.forEach((item) => {
   });
 });
 
-// const nameErr = document.querySelector('.fullNameError');
-// const emailErr = document.querySelector('.emailError');
-// const msgErr = document.querySelector('.msgError');
-// const fullNValid = document.querySelector('.fullNValid');
-// console.log(fullNValid);
-// const emailValid = document.querySelector('.emailValid');
-// const msgValid = document.querySelector('.msgValid');
+const nameErr = document.querySelector('.fullNameError');
+const emailErr = document.querySelector('.emailError');
+const fullNValid = document.querySelector('.fullNValid');
+const emailValid = document.querySelector('.emailValid');
+const msgErr = document.querySelector('.msgError');
+const msgValid = document.querySelector('.msgValid');
+const submitErr = document.querySelector('.submitErr');
+const valid = document.querySelector('.valid');
 
-// function validateFullName() {
-//   const fullName = document.getElementById('fullname').value;
+function validateFullName() {
+  const fullName = document.getElementById('fullname').value;
 
-//   if (fullName.length === 0) {
-//     nameErr.innerHTML = 'Full name is required';
-//     fullNValid.innerHTML = null;
-//     return false;
-//   }
-//   if (!fullName.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
-//     nameErr.innerHTML = 'Enter second name';
-//     return false;
-//   }
-//   nameErr.innerHTML = null;
-//   // fullNValid.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-//   return true;
-// }
-
-// function validateEmail() {
-// 	const email = document.getElementById("email").value;
-
-// 	if (email.length === 0) {
-// 		emailErr.innerHTML = "Email is required";
-// 		emailValid.innerHTML = null;
-// 		return false;
-// 	}
-// 	if (
-// 		!email.match(
-// 			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-// 		)
-// 	) {
-// 		emailErr.innerHTML = "Email Invalid";
-// 		emailValid.innerHTML = null;
-// 		return false;
-// 	}
-// 	emailErr.innerHTML = null;
-// 	emailValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
-// 	return true;
-// }
-
-const form = document.getElementById('form');
-const fullName = document.getElementById('fullname');
-const email = document.getElementById('email');
-const message = document.getElementById('msg');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  checkInputs();
-
-});
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const error = formControl.querySelector('.err');
-
-  error.innerText = message;
-  formControl.classList.add('error');
-  formControl.classList.remove('success');
+  if (fullName.length === 0) {
+    nameErr.innerHTML = 'Full name is required';
+    fullNValid.innerHTML = null;
+    return false;
+  }
+  if (!fullName.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+    nameErr.innerHTML = 'Enter second name';
+    fullNValid.innerHTML = null;
+    return false;
+  }
+  nameErr.innerHTML = null;
+  fullNValid.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+  return true;
 }
 
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  const error = formControl.querySelector('.err');
+function validateEmail() {
+  const email = document.getElementById('email').value;
 
-  error.innerText = '';
-  formControl.classList.remove('error');
-  formControl.classList.add('success');
+  if (email.length === 0) {
+    emailErr.innerHTML = 'Email is required';
+    emailValid.innerHTML = null;
+    return false;
+  }
+  if (
+    !email.match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    )
+  ) {
+    emailErr.innerHTML = 'Email Invalid';
+    emailValid.innerHTML = null;
+    return false;
+  }
+  emailErr.innerHTML = null;
+  emailValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
 }
 
-function isEmail(email) {
-  return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+function validateMsg() {
+  const msg = document.getElementById('msg').value;
+  const required = 30;
 
-
-function checkInputs() {
-  const fullNameValue = fullName.value.trim();
-  const emailValue = email.value.trim();
-  const messageValue = message.value.trim();
-
-  if (fullNameValue === '') {
-    setErrorFor(fullName, 'Full name is required');
-  } else {
-    setSuccessFor(fullName);
+  const charLeft = required - msg.length;
+  if (charLeft > 0) {
+    msgErr.innerHTML = `${charLeft}more characters required`;
+    msgValid.innerHTML = null;
+    return false;
   }
+  msgErr.innerHTML = null;
+  msgValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+}
 
-  if (emailValue === '') {
-    setErrorFor(email, 'Email is required');
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email, 'Email is not valid');
-  } else {
-    setSuccessFor(email);
+function formValidate() {
+  if (
+    !validateFullName() || !validateEmail() || !validateMsg()
+  ) {
+    submitErr.style.display = 'block';
+    submitErr.style.color = 'red';
+    submitErr.innerHTML = 'Please fix error to submit';
+    setTimeout(() => {
+      submitErr.style.display = 'none';
+    }, 3000);
+    return false;
   }
-
-  if (messageValue === '') {
-    setErrorFor(message, 'Message is required');
-  } else {
-    setSuccessFor(message);
-  }
+  submitErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
 }

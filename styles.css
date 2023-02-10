@@ -247,14 +247,16 @@
   font-size: 0.8rem;
   position: relative;
   z-index: 10;
-  top: -2.3rem;
-  left: 65%;
+  right: 10%;
+}
+#contact .form .fieldset .input-grp .msgError {
+  left: 50%;
+}
+#contact .form .fieldset .input-grp .msgValid {
+  top: -1rem;
 }
 #contact .form .fieldset textarea {
   width: 95%;
-}
-#contact .form .fieldset textarea:valid {
-  border-color: #0caa0c;
 }
 #contact .form .fieldset textarea:focus {
   outline: none;
@@ -264,11 +266,11 @@
   margin: 0.5rem 0;
   padding: 0.5rem;
 }
-#contact .form .fieldset input:valid {
-  border-color: #0caa0c;
-}
 #contact .form .fieldset input:focus {
   outline: none;
+}
+#contact .form .fieldset .submitErr {
+  align-self: center;
 }
 #contact .form .fieldset .btn {
   font-family: "Inter", sans-serif;

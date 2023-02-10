@@ -170,6 +170,7 @@
 								rows="10"
 								maxlength="500"
 								minlength="30"
+								onkeyup="validateMsg()"
 								placeholder="Enter text here"
 								required
 							></textarea>
@@ -177,7 +178,8 @@
 						<span class="err msgError"></span>
 						<span class="msgValid valid"></span>
 					</div>
-					<button class="btn" type="submit">Get in Touch</button>
+					<button class="btn" type="submit" onclick="formValidate()">Get in Touch</button>
+					<span class="submitErr"></span>
 				</fieldset>
 			</form>
 		</section>
