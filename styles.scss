@@ -268,36 +268,10 @@ $secondary: #172b4d;
 
       textarea {
         width: 95%;
-        
-      .input-grp {
-        .err {
-          color: red;
-          font-size: 0.8rem;
-          position: relative;
-          z-index: 10;
-          top: -2.3rem;
-          left: 55%;
-        }
 
-        .valid {
-          color: green;
-          font-size: 0.8rem;
-          position: relative;
-          z-index: 10;
-          right: 10%;
+        &:valid {
+          border-color: #0caa0c;
         }
-
-        .msgError {
-          left: 50%;
-        }
-
-        .msgValid {
-          top: -1rem;
-        }
-      }
-
-      textarea {
-        width: 95%;
 
         &:focus {
           outline: none;
@@ -308,12 +282,14 @@ $secondary: #172b4d;
         width: 95%;
         margin: 0.5rem 0;
         padding: 0.5rem;
+
+        &:valid {
+          border-color: #0caa0c;
+        }
+
         &:focus {
           outline: none;
         }
-      }
-      .submitErr {
-        align-self: center;
       }
 
       .btn {
@@ -773,6 +749,7 @@ $secondary: #172b4d;
 
   .popup {
     height: 100%;
+
     #popup {
       margin: 0 2rem;
 
@@ -1126,7 +1103,8 @@ $secondary: #172b4d;
     position: fixed;
     top: 0;
     left: 0;
-    
+    align-self: center;
+
     #popup {
       width: 750px;
 

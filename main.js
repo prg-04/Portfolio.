@@ -201,7 +201,6 @@ popImg.appendChild(img2);
 popDiv.appendChild(popImg);
 modal.appendChild(popDiv);
 
-
 const poptext = createDiv(popupData[0].divClasses[1]);
 const popHead = createDiv(popupData[0].divClasses[2]);
 const h2pop = createH2(popupData[0].h2);
