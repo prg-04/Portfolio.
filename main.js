@@ -366,3 +366,12 @@ function formValidate() {
   submitErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
+
+const navlinks = document.querySelectorAll('.link');
+
+navlinks.forEach((item) => {
+  item.addEventListener('click', () => {
+    navlink.classList.remove('active');
+    toggle.classList.remove('open');
+  });
+});
