@@ -36,7 +36,6 @@ const cardsData = [
     btnCls: 'cardBtn',
   },
 ];
-
 const popupData = [
   {
     id: 'popup',
@@ -281,5 +280,11 @@ demoLink.forEach((item) => {
 source.forEach((item) => {
   item.addEventListener('click', () => {
     window.location.href = github;
+const navlinks = document.querySelectorAll('.link');
+
+navlinks.forEach((item) => {
+  item.addEventListener('click', () => {
+    navlink.classList.remove('active');
+    toggle.classList.remove('open');
   });
 });
