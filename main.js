@@ -21,7 +21,7 @@ const cardsData = [
   },
   {
     class: ['img-hdr', 'langs'],
-    divCls: [
+    divClasses: [
       'card cd1',
       'card cd2',
       'card cd3',
@@ -29,9 +29,9 @@ const cardsData = [
       'card cd5',
       'card cd6',
     ],
-    listcls: 'cd-links',
+    listClass: 'cd-links',
     heading: ['Multi-Post Stories', 'Gain+Glory'],
-    lists: ['Ruby on Rails', 'css', 'Javascript', 'html'],
+    technologies: ['Ruby on Rails', 'css', 'Javascript', 'html'],
     btn: 'See Project',
     btnCls: 'cardBtn',
   },
@@ -39,7 +39,7 @@ const cardsData = [
 const popupData = [
   {
     id: 'popup',
-    divCls: ['popimg', 'poptext', 'popHead', 'topBtns', 'btns'],
+    divClasses: ['popimg', 'poptext', 'popHead', 'topBtns', 'btns'],
     classes: [
       'fa-solid fa-x close',
       'imgMob',
@@ -51,14 +51,14 @@ const popupData = [
       'link',
       'popPara',
     ],
-    btns: ['See Live', 'See source'],
+    buttonText: ['See Live', 'See source'],
     images: ['./assets/mobile.png', './assets/popImg.png'],
     h2: 'Keeping track of hundreds of components',
-    btnLinks: [
+    buttonLinks: [
       'https://prg-04.github.io/Portfolio_',
       'https://github.com/prg-04/Portfolio_',
     ],
-    lists: [
+    technologies: [
       'Codekit',
       'Github',
       'Javascript',
@@ -66,7 +66,7 @@ const popupData = [
       'Terminal',
       'Codepen',
     ],
-    para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the release",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the release",
   },
 ];
 
@@ -112,11 +112,11 @@ function createLi(txt) {
 }
 
 function createLists(arr) {
-  const lists = arr.map((elem) => {
+  const technologies = arr.map((elem) => {
     const li = createLi(elem);
     return li;
   });
-  return lists;
+  return technologies;
 }
 
 function createPara(txt) {
@@ -145,9 +145,9 @@ function createCard(arr) {
     const div2 = createDiv(cardsData[1].class[1]);
     const h3 = createH3(cardsData[1].heading[0]);
     const h3m = createH3(cardsData[1].heading[1]);
-    const ul = createUl(cardsData[1].listcls);
-    const lists = createLists(cardsData[1].lists);
-    lists.map((list) => ul.appendChild(list));
+    const ul = createUl(cardsData[1].listClass);
+    const technologies = createLists(cardsData[1].technologies);
+    technologies.map((list) => ul.appendChild(list));
     const btn = createBtn(cardsData[1].btn);
     btn.className = cardsData[1].btnCls;
     card.appendChild(div);
@@ -162,15 +162,15 @@ function createCard(arr) {
 }
 
 const cdContainer = createDiv(cardsData[0].class2);
-const cards = createCard(cardsData[1].divCls);
+const cards = createCard(cardsData[1].divClasses);
 cards.map((card) => cdContainer.appendChild(card));
 work.appendChild(cdContainer);
 
 const modal = document.querySelector('.popup');
 
 const arr = popupData[0].classes;
-const [demo, src] = popupData[0].btns;
-const [gitpages, github] = popupData[0].btnLinks;
+const [demo, src] = popupData[0].buttonText;
+const [gitpages, github] = popupData[0].buttonLinks;
 
 const [
   close,
@@ -187,7 +187,7 @@ const popDiv = createDiv2(popupData[0].id);
 const icon = document.createElement('i');
 icon.className = close;
 popDiv.appendChild(icon);
-const popImg = createDiv(popupData[0].divCls[0]);
+const popImg = createDiv(popupData[0].divClasses[0]);
 const img1 = createImg(popupData[0].images[0]);
 img1.className = imgMob;
 popImg.appendChild(img1);
@@ -198,27 +198,27 @@ popImg.appendChild(img2);
 popDiv.appendChild(popImg);
 modal.appendChild(popDiv);
 
-const poptext = createDiv(popupData[0].divCls[1]);
-const popHead = createDiv(popupData[0].divCls[2]);
+const poptext = createDiv(popupData[0].divClasses[1]);
+const popHead = createDiv(popupData[0].divClasses[2]);
 const h2pop = createH2(popupData[0].h2);
 h2pop.className = popTtl;
 popHead.appendChild(h2pop);
 
-const topBtnDiv = createDiv(popupData[0].divCls[3]);
-const btn1 = createBtn(popupData[0].btns[0]);
+const topBtnDiv = createDiv(popupData[0].divClasses[3]);
+const btn1 = createBtn(popupData[0].buttonText[0]);
 btn1.className = seeLive;
 topBtnDiv.appendChild(btn1);
 
-const btn2 = createBtn(popupData[0].btns[1]);
+const btn2 = createBtn(popupData[0].buttonText[1]);
 btn2.className = seeLink;
 topBtnDiv.appendChild(btn2);
 popHead.appendChild(topBtnDiv);
 poptext.appendChild(popHead);
 
 const ul = createUl(popLinks);
-const lists = createLists(popupData[0].lists);
+const technologies = createLists(popupData[0].technologies);
 
-lists.map((item) => {
+technologies.map((item) => {
   const elem = item;
   elem.className = link;
 
@@ -227,20 +227,20 @@ lists.map((item) => {
     : null;
 });
 
-lists.map((list) => ul.appendChild(list));
+technologies.map((list) => ul.appendChild(list));
 poptext.appendChild(ul);
 
-const txt = createPara(popupData[0].para);
+const txt = createPara(popupData[0].description);
 txt.className = popPara;
 poptext.appendChild(txt);
 
-const bottomBtnDiv = createDiv(popupData[0].divCls[4]);
-const btn3 = createBtn(popupData[0].btns[2]);
+const bottomBtnDiv = createDiv(popupData[0].divClasses[4]);
+const btn3 = createBtn(popupData[0].buttonText[2]);
 btn3.className = seeLive;
 btn3.innerHTML = demo;
 bottomBtnDiv.appendChild(btn3);
 
-const btn4 = createBtn(popupData[0].btns[3]);
+const btn4 = createBtn(popupData[0].buttonText[3]);
 btn4.className = seeLink;
 btn4.innerHTML = src;
 bottomBtnDiv.appendChild(btn4);

@@ -748,12 +748,13 @@ $secondary: #172b4d;
   }
 
   .popup {
+    height: 100%;
     #popup {
       margin: 0 2rem;
 
       .popTtl {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 34px;
+        line-height: 44px;
       }
 
       .popimg {
@@ -767,6 +768,7 @@ $secondary: #172b4d;
         .popPara {
           font-size: 16px;
           line-height: 22px;
+          margin-bottom: 1rem;
         }
       }
     }
@@ -1100,6 +1102,7 @@ $secondary: #172b4d;
     position: fixed;
     top: 0;
     left: 0;
+    align-self: center;
 
     #popup {
       width: 750px;
@@ -1112,7 +1115,7 @@ $secondary: #172b4d;
         .imgDesk {
           display: block;
           width: 750px;
-          height: 450px;
+          height: 400px;
         }
       }
 
@@ -1172,7 +1175,7 @@ $secondary: #172b4d;
         .imgDesk {
           display: block;
           width: 100%;
-          height: 450px;
+          height: 400px;
         }
       }
 
@@ -1215,6 +1218,6 @@ $secondary: #172b4d;
 
 @media screen and (min-width: 1200px) {
   .popup {
-    left: 25%;
+    left: 15%;
   }
 }
