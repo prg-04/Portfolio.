@@ -280,6 +280,9 @@ demoLink.forEach((item) => {
 source.forEach((item) => {
   item.addEventListener('click', () => {
     window.location.href = github;
+  });
+});
+
 const navlinks = document.querySelectorAll('.link');
 
 navlinks.forEach((item) => {
