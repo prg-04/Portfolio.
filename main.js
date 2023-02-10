@@ -312,7 +312,7 @@ function validateFullName() {
 }
 
 function validateEmail() {
-  const email = document.getElementById('email').value;
+  const email = document.getElementById('email').toLowerCase().value;
 
   if (email.length === 0) {
     emailErr.innerHTML = 'Email is required';
