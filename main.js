@@ -224,9 +224,7 @@ lists.map((item) => {
   const elem = item;
   elem.className = link;
 
-  return item.innerHTML === 'Bootstrap'
-		|| item.innerHTML === 'Terminal'
-		|| item.innerHTML === 'Codepen'
+  return item.innerHTML === 'Bootstrap' || item.innerHTML === 'Terminal' || item.innerHTML === 'Codepen'
     ? elem
     : null;
 });
@@ -294,7 +292,6 @@ const emailValid = document.querySelector('.emailValid');
 const msgErr = document.querySelector('.msgError');
 const msgValid = document.querySelector('.msgValid');
 const submitErr = document.querySelector('.submitErr');
-const valid = document.querySelector('.valid');
 
 function validateFullName() {
   const fullName = document.getElementById('fullname').value;
@@ -351,6 +348,7 @@ function validateMsg() {
   return true;
 }
 
+// eslint-disable-next-line no-unused-vars
 function formValidate() {
   if (
     !validateFullName() || !validateEmail() || !validateMsg()
