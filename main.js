@@ -292,6 +292,7 @@ const emailValid = document.querySelector('.emailValid');
 const msgErr = document.querySelector('.msgError');
 const msgValid = document.querySelector('.msgValid');
 const submitErr = document.querySelector('.submitErr');
+const submit = document.getElementById('submit');
 
 function validateFullName() {
   const fullName = document.getElementById('fullname').value;
@@ -312,7 +313,7 @@ function validateFullName() {
 }
 
 function validateEmail() {
-  const email = document.getElementById('email').value;
+  const email = document.getElementById('email').toLowerCase().value;
 
   if (email.length === 0) {
     emailErr.innerHTML = 'Email is required';
@@ -348,7 +349,6 @@ function validateMsg() {
   return true;
 }
 
-// eslint-disable-next-line no-unused-vars
 function formValidate() {
   if (
     !validateFullName() || !validateEmail() || !validateMsg()
@@ -364,6 +364,8 @@ function formValidate() {
   submitErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
+
+submit.addEventListener('click', () => formValidate());
 
 const navlinks = document.querySelectorAll('.link');
 
