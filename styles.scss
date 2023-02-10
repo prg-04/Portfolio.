@@ -1222,3 +1222,63 @@ $secondary: #172b4d;
     left: 15%;
   }
 }
+
+@media screen and (min-width: 1500px) {
+  .popup {
+    left: 25%;
+    width: 920px;
+    height: 883px;
+
+    #popup {
+      width: 900px;
+
+      .popimg {
+        .imgMob {
+          display: none;
+        }
+
+        .imgDesk {
+          display: block;
+          width: 100%;
+          height: 400px;
+        }
+      }
+
+      .poptext {
+        .popHead {
+          width: 98%;
+          align-items: center;
+
+          .popTtl {
+            width: 55%;
+            font-size: 1.8rem;
+          }
+
+          .topBtns {
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+          }
+        }
+
+        .popLinks {
+          margin-top: 1rem;
+
+          .link {
+            display: block;
+          }
+        }
+
+        .popPara {
+          width: 97%;
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    &.open {
+      display: flex;
+    }
+  }
+}
