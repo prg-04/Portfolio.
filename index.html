@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script
 			src="https://kit.fontawesome.com/0ec53d8e70.js"
 			crossorigin="anonymous"
 		></script>
 		<link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <section class="hero">
+	</head>
+	<body class="body">
+		<section class="hero">
 			<header class="header-sec">
 				<h1 class="logo">Welcome</h1>
 				<nav class="navlinks">
@@ -43,10 +43,14 @@
 				</div>
 				<ul class="socials">
 					<li>
-						<a href="https://github.com/prg-04/"><i class="fa-brands fa-github"></i></a>
+						<a href="https://github.com/prg-04/"
+							><i class="fa-brands fa-github"></i
+						></a>
 					</li>
 					<li>
-						<a href="https://www.linkedin.com/in/evanson-karanja-3549841b8/"><i class="fa-brands fa-linkedin-in"></i></a>
+						<a href="https://www.linkedin.com/in/evanson-karanja-3549841b8/"
+							><i class="fa-brands fa-linkedin-in"></i
+						></a>
 					</li>
 					<li>
 						<a href="/"><img src="assets\Vector.png" alt="vector" /></a>
@@ -64,111 +68,11 @@
 				</div>
 			</section>
 		</section>
+    
+		<section id="portfolio"></section>
+		<section class="popup"></section>
+		<section id="about">
 
-        <section id="portfolio">
-			<div class="ttl">
-				<h2>Recent Works</h2>
-			</div>
-			<div class="cards">
-				<div class="card cd1">
-					<div class="img-hdr"></div>
-					<div class="langs">
-						<h3>
-							Multi-Post Stories <br />
-							Gain+Glory
-						</h3>
-						<ul class="cd-links">
-							<li><a href="/">Ruby on Rails</a></li>
-							<li><a href="/">css</a></li>
-							<li><a href="/">Javascript</a></li>
-							<li><a href="/">html</a></li>
-						</ul>
-						<button>See Project</button>
-					</div>
-				</div>
-				<div class="card cd2">
-					<div class="img-hdr"></div>
-					<div class="langs">
-						<h3>
-							Multi-Post Stories <br />
-							Gain+Glory
-						</h3>
-						<ul class="cd-links">
-							<li><a href="/">Ruby on Rails</a></li>
-							<li><a href="/">css</a></li>
-							<li><a href="/">Javascript</a></li>
-							<li><a href="/">html</a></li>
-						</ul>
-						<button>See Project</button>
-					</div>
-				</div>
-				<div class="card cd3">
-					<div class="img-hdr"></div>
-					<div class="langs">
-						<h3>
-							Multi-Post Stories <br />
-							Gain+Glory
-						</h3>
-						<ul class="cd-links">
-							<li><a href="/">Ruby on Rails</a></li>
-							<li><a href="/">css</a></li>
-							<li><a href="/">Javascript</a></li>
-							<li><a href="/">html</a></li>
-						</ul>
-						<button>See Project</button>
-					</div>
-				</div>
-				<div class="card cd4">
-					<div class="img-hdr"></div>
-					<div class="langs">
-						<h3>
-							Multi-Post Stories <br />
-							Gain+Glory
-						</h3>
-						<ul class="cd-links">
-							<li><a href="/">Ruby on Rails</a></li>
-							<li><a href="/">css</a></li>
-							<li><a href="/">Javascript</a></li>
-							<li><a href="/">html</a></li>
-						</ul>
-						<button>See Project</button>
-					</div>
-				</div>
-				<div class="card cd5">
-					<div class="img-hdr"></div>
-					<div class="langs">
-						<h3>
-							Multi-Post Stories <br />
-							Gain+Glory
-						</h3>
-						<ul class="cd-links">
-							<li><a href="/">Ruby on Rails</a></li>
-							<li><a href="/">css</a></li>
-							<li><a href="/">Javascript</a></li>
-							<li><a href="/">html</a></li>
-						</ul>
-						<button>See Project</button>
-					</div>
-				</div>
-				<div class="card cd6">
-					<div class="img-hdr"></div>
-					<div class="langs">
-						<h3>
-							Multi-Post Stories <br />
-							Gain+Glory
-						</h3>
-						<ul class="cd-links">
-							<li><a href="/">Ruby on Rails</a></li>
-							<li><a href="/">css</a></li>
-							<li><a href="/">Javascript</a></li>
-							<li><a href="/">html</a></li>
-						</ul>
-						<button>See Project</button>
-					</div>
-				</div>
-			</div>
-		</section>
-        <section id="about">
 			<div class="about-des">
 				<div class="about-ttl">
 					<h2>About me</h2>
@@ -219,52 +123,68 @@
 			</div>
 		</section>
 
-        <section id="contact">
+		<section id="contact">
 			<div class="pri-text">
 				<p class="contact-para">
 					I'm always interested in hearing about new projects, so if you'd like
 					to chat please get in touch.
 				</p>
 			</div>
-			<form action="https://formspree.io/f/xpznwejk" method="post" class="form">
-				<fieldset>
-					<label class="fullN"
-						><input
-							type="text"
-							name="fullname"
-							id="fullname"
-							maxlength="30"
-							placeholder="Full name"
-							required
-						/>
-					</label>
+			<form action="https://formspree.io/f/xpznwejk" method="post" id="form" class="form">
+				<fieldset class="fieldset">
+					<div class="input-grp">
+						<label class="fullN"
+							><input
+								type="text"
+								name="fullname"
+								id="fullname"
+								maxlength="30"
+								placeholder="Full name"
+								onkeyup="validateFullName()"
+								required
+							/>
+						</label>
+						<span class="err fullNameError"></span>
+						<span class="fullNValid valid"></span>
+					</div>
 
-					<label class="email"
-						><input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Email address"
-							required
-						/>
-					</label>
-					<label class="msg">
-						<textarea
-							name="msg"
-							id="msg"
-							cols="30"
-							rows="10"
-							maxlength="500"
-							minlength="30"
-							placeholder="Enter text here"
-							required
-						></textarea>
-					</label>
-					<button class="btn" type="submit">Get in Touch</button>
+					<div class="input-grp">
+						<label class="email"
+							><input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Email address"
+								onkeyup="validateEmail()"
+								required
+							/>
+						</label>
+						<span class="err emailError"><i class="fa-regular fa-circle-check"></i></span>
+						<span class="emailValid valid"></span>
+					</div>
+					<div class="input-grp">
+						<label class="msg">
+							<textarea
+								name="msg"
+								id="msg"
+								cols="30"
+								rows="10"
+								maxlength="500"
+								minlength="30"
+								onkeyup="validateMsg()"
+								placeholder="Enter text here"
+								required
+							></textarea>
+						</label>
+						<span class="err msgError"></span>
+						<span class="msgValid valid"></span>
+					</div>
+					<button id="submit" class="btn" type="submit">Get in Touch</button>
+					<span class="submitErr"></span>
 				</fieldset>
 			</form>
 		</section>
-        <footer id="copyright">
+		<footer id="copyright">
 			<div class="copyright">
 				<ul class="socials">
 					<li>
@@ -286,8 +206,7 @@
 				<p class="copyright-txt">myemailhere@email.com</p>
 			</div>
 		</footer>
-        
 
-    <script src="main.js"></script>
-</body>
+		<script src="main.js"></script>
+	</body>
 </html>

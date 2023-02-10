@@ -145,6 +145,10 @@
   height: 100vh;
 }
 
+.hero.blur {
+  filter: blur(5px);
+}
+
 .scroll {
   margin-top: 3.7rem;
 }
@@ -217,6 +221,230 @@
   line-height: 52px;
   text-align: center;
   color: #172b4d;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+#contact .pri-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .pri-text .contact-para {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: #172b4d;
+}
+
+#contact .form {
+  margin-top: 2rem;
+}
+
+#contact .form .fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  width: 90%;
+  margin: 0.5rem;
+}
+
+#contact .form .fieldset .input-grp .err {
+  color: red;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  top: -2.3rem;
+  left: 55%;
+}
+
+#contact .form .fieldset .input-grp .valid {
+  color: green;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  right: 10%;
+}
+
+#contact .form .fieldset .input-grp .msgError {
+  left: 50%;
+}
+
+#contact .form .fieldset .input-grp .msgValid {
+  top: -1rem;
+}
+
+#contact .form .fieldset textarea {
+  width: 95%;
+}
+
+#contact .form .fieldset textarea:focus {
+  outline: none;
+}
+
+#contact .form .fieldset input {
+  width: 95%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+#contact .form .fieldset input:focus {
+  outline: none;
+}
+
+#contact .form .fieldset .submitErr {
+  align-self: center;
+}
+
+#contact .form .fieldset .btn {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  width: 129px;
+  height: 48px;
+  background-color: #36b37f;
+  color: #fff;
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+#contact .form .fieldset .btn:active {
+  background: #36b37f;
+}
+
+#contact .form .fieldset .btn:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
+}
+
+#contact .form .fieldset .btn:visited {
+  background: #008552;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 5%;
+}
+
+.popup #popup {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  background-color: #fff;
+  margin: 0 1rem;
+}
+
+.popup #popup .fa-x {
+  font-size: 1.5rem;
+  align-self: end;
+  cursor: pointer;
+  margin: 0 0 0 1rem;
+  color: #67798e;
+  background: #ebecf0;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.popup #popup .popimg {
+  width: 100%;
+}
+
+.popup #popup .popimg .imgDesk {
+  display: none;
+}
+
+.popup #popup .popimg .imgMob {
+  width: 100%;
+  height: 190px;
+}
+
+.popup #popup .poptext .popHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup #popup .poptext .popTtl {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #172b4d;
+}
+
+.popup #popup .poptext .btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup #popup .poptext .btns .btn {
+  background: #36b37f;
+  color: #fff;
+  padding: 0.7rem;
+  border: none;
+  margin-top: 1rem;
+  width: 141px;
+}
+
+.popup #popup .poptext .topBtns {
+  display: none;
+}
+
+.popup #popup .poptext .topBtns .btn {
+  background: #36b37f;
+  color: #fff;
+  padding: 0.7rem;
+  border: none;
+  margin-top: 1rem;
+  width: 141px;
+}
+
+.popup #popup .popLinks {
+  display: flex;
+  margin-top: 0.4rem;
+}
+
+.popup #popup .popLinks li {
+  margin: 0.5rem;
+  border-radius: 5px;
+  background: #ebf0ee;
+  padding: 0.5rem;
+  color: #344563;
+}
+
+.popup #popup .popLinks .link {
+  display: none;
+}
+
+.popup #popup .popPara {
+  margin-top: 0.35rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #344563;
+}
+
+.popup.open {
+  display: flex;
 }
 
 #about {
@@ -354,101 +582,14 @@
   color: #36b37f;
 }
 
-#contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-#contact .pri-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#contact .pri-text .contact-para {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  text-align: center;
-  color: #172b4d;
-}
-
-#contact .form {
-  margin-top: 2rem;
-}
-
-#contact .form fieldset {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: none;
-  width: 90%;
-  margin: 0.5rem;
-}
-
-#contact .form fieldset textarea {
-  width: 95%;
-}
-
-#contact .form fieldset textarea:valid {
-  border-color: #0caa0c;
-}
-
-#contact .form fieldset textarea:focus {
-  outline: none;
-}
-
-#contact .form fieldset input {
-  width: 95%;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-}
-
-#contact .form fieldset input:valid {
-  border-color: #0caa0c;
-}
-
-#contact .form fieldset input:focus {
-  outline: none;
-}
-
-#contact .form fieldset .btn {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  width: 129px;
-  height: 48px;
-  background-color: #36b37f;
-  color: #fff;
-  align-self: center;
-  border: none;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-
-#contact .form fieldset .btn:active {
-  background: #36b37f;
-}
-
-#contact .form fieldset .btn:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
-}
-
-#contact .form fieldset .btn:visited {
-  background: #008552;
-}
-
 #portfolio {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 1.5rem;
+}
+
+#portfolio.blur {
+  filter: blur(5px);
 }
 
 #portfolio .cards {
@@ -612,6 +753,25 @@
   #contact .form fieldset .msg {
     grid-column: 1/3;
     grid-row: 3/4;
+  }
+
+  .popup #popup {
+    margin: 0 2rem;
+  }
+
+  .popup #popup .popTtl {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .popup #popup .popimg .imgMob {
+    width: 100%;
+    height: 350px;
+  }
+
+  .popup #popup .poptext .popPara {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -925,5 +1085,119 @@
 
   .copyright .copyright-txt {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 910px) {
+  .popup {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .popup #popup {
+    width: 750px;
+  }
+
+  .popup #popup .popimg .imgMob {
+    display: none;
+  }
+
+  .popup #popup .popimg .imgDesk {
+    display: block;
+    width: 750px;
+    height: 450px;
+  }
+
+  .popup #popup .poptext .popHead {
+    width: 98%;
+  }
+
+  .popup #popup .poptext .popHead .popTtl {
+    width: 55%;
+  }
+
+  .popup #popup .poptext .popHead .topBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .popup #popup .poptext .popLinks .link {
+    display: block;
+  }
+
+  .popup #popup .poptext .popPara {
+    width: 97%;
+  }
+
+  .popup #popup .poptext .btns {
+    display: none;
+  }
+
+  .popup.open {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 911px) {
+  .popup {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 5%;
+  }
+
+  .popup #popup {
+    width: 900px;
+  }
+
+  .popup #popup .popimg .imgMob {
+    display: none;
+  }
+
+  .popup #popup .popimg .imgDesk {
+    display: block;
+    width: 100%;
+    height: 450px;
+  }
+
+  .popup #popup .poptext .popHead {
+    width: 98%;
+  }
+
+  .popup #popup .poptext .popHead .popTtl {
+    width: 55%;
+  }
+
+  .popup #popup .poptext .popHead .topBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .popup #popup .poptext .popLinks .link {
+    display: block;
+  }
+
+  .popup #popup .poptext .popPara {
+    width: 97%;
+  }
+
+  .popup #popup .poptext .btns {
+    display: none;
+  }
+
+  .popup.open {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .popup {
+    left: 25%;
   }
 }
