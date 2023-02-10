@@ -172,27 +172,8 @@ const modal = document.querySelector('.popup');
 const arr = popupData[0].classes;
 const [demo, src] = popupData[0].btns;
 const [gitpages, github] = popupData[0].btnLinks;
-const [
-  close,
-  imgMob,
-  imgDesk,
-  popTtl,
-  seeLive,
-  seeLink,
-  popLinks,
-  link,
-  popPara,
-] = arr;
 
-const popDiv = createDiv2(popupData[0].id);
-const icon = document.createElement('i');
-icon.className = close;
-popDiv.appendChild(icon);
-
-const popImg = createDiv(popupData[0].divCls[0]);
-const img1 = createImg(popupData[0].images[0]);
-img1.className = imgMob;
-popImg.appendChild(img1);
+// Add the code here
 
 const img2 = createImg(popupData[0].images[1]);
 img2.className = imgDesk;
