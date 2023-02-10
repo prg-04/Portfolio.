@@ -313,10 +313,15 @@ function validateFullName() {
 }
 
 function validateEmail() {
-  const email = document.getElementById('email').toLowerCase().value;
+  const email = document.getElementById('email').value;
 
   if (email.length === 0) {
     emailErr.innerHTML = 'Email is required';
+    emailValid.innerHTML = null;
+    return false;
+  }
+  if (email.match(/[A-Z]/g)) {
+    emailErr.innerHTML = 'Enter email in lowercase';
     emailValid.innerHTML = null;
     return false;
   }
@@ -350,9 +355,7 @@ function validateMsg() {
 }
 
 function formValidate() {
-  if (
-    !validateFullName() || !validateEmail() || !validateMsg()
-  ) {
+  if (!validateFullName() || !validateEmail() || !validateMsg()) {
     submitErr.style.display = 'block';
     submitErr.style.color = 'red';
     submitErr.innerHTML = 'Please fix error to submit';
