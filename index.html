@@ -131,38 +131,47 @@
 			</div>
 			<form action="https://formspree.io/f/xpznwejk" method="post" class="form">
 				<fieldset class="fieldset">
-					<label class="fullN"
-						><input
-							type="text"
-							name="fullname"
-							id="fullname"
-							maxlength="30"
-							placeholder="Full name"
-							required
-						/>
-					</label>
+					<div class="input-grp">
+						<label class="fullN"
+							><input
+								type="text"
+								name="fullname"
+								id="fullname"
+								maxlength="30"
+								placeholder="Full name"
+								required
+							/>
+						</label>
+						<span class="err">Error Message!</span>
+					</div>
 
-					<label class="email"
-						><input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Email address"
-							required
-						/>
-					</label>
-					<label class="msg">
-						<textarea
-							name="msg"
-							id="msg"
-							cols="30"
-							rows="10"
-							maxlength="500"
-							minlength="30"
-							placeholder="Enter text here"
-							required
-						></textarea>
-					</label>
+					<div class="input-grp">
+						<label class="email"
+							><input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Email address"
+								required
+							/>
+						</label>
+						<span class="err">Error Message!</span>
+					</div>
+					<div class="input-grp">
+						<label class="msg">
+							<textarea
+								name="msg"
+								id="msg"
+								cols="30"
+								rows="10"
+								maxlength="500"
+								minlength="30"
+								placeholder="Enter text here"
+								required
+							></textarea>
+						</label>
+						<span class="err">Error Message!</span>
+					</div>
 					<button class="btn" type="submit">Get in Touch</button>
 				</fieldset>
 			</form>

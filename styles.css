@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -37,13 +36,11 @@
     opacity: 0;
     transform: translate3d(-100%, 0, 0);
   }
-
   100% {
     opacity: 1;
     transform: none;
   }
 }
-
 .toggleMenu {
   display: flex;
   justify-content: center;
@@ -54,7 +51,6 @@
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-
 .toggleMenu .menu {
   height: 4px;
   width: 30px;
@@ -63,7 +59,6 @@
   transition: all 0.5s ease-in-out;
   position: relative;
 }
-
 .toggleMenu .menu::before,
 .toggleMenu .menu::after {
   content: "";
@@ -74,11 +69,9 @@
   transition: all 0.5s ease-in-out;
   position: absolute;
 }
-
 .toggleMenu .menu::before {
   transform: translateY(-10px);
 }
-
 .toggleMenu .menu::after {
   transform: translateY(10px);
 }
@@ -100,7 +93,6 @@
   display: flex;
   align-items: center;
 }
-
 .socials a {
   margin: 0.8rem;
   font-size: 1.5em;
@@ -116,21 +108,17 @@
   width: 100%;
   background: #fff;
 }
-
 .navlinks.active ul {
   display: flex;
   margin: 2rem 2rem 0;
   flex-direction: column;
 }
-
 .navlinks.active ul li {
   margin: 1rem 0;
 }
-
 .navlinks.active ul li :hover {
   background-color: #ebf0ee;
 }
-
 .navlinks.active ul li a {
   border-radius: 10px;
   padding: 1rem;
@@ -144,7 +132,6 @@
 .hero {
   height: 100vh;
 }
-
 .hero.blur {
   filter: blur(5px);
 }
@@ -152,13 +139,11 @@
 .scroll {
   margin-top: 3.7rem;
 }
-
 .scroll span {
   padding: 0.8rem;
   border-radius: 50%;
   border: 1px solid lightgray;
 }
-
 .scroll span i {
   color: #172b4d;
 }
@@ -172,11 +157,9 @@
   flex-direction: column;
   align-items: center;
 }
-
 .hero-intro .title {
   margin: 5rem 2rem 0;
 }
-
 .hero-intro .title h1 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -185,15 +168,12 @@
   color: #172b4d;
   text-align: center;
 }
-
 .hero-intro .title h1 span {
   color: #36b37f;
 }
-
 .hero-intro .description {
   margin: 1rem;
 }
-
 .hero-intro .description p {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -212,7 +192,6 @@
   padding: 1.5rem;
   width: 98%;
 }
-
 .ttl h2 {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -229,14 +208,12 @@
   justify-content: center;
   margin-top: 3rem;
 }
-
 #contact .pri-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 #contact .pri-text .contact-para {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -246,11 +223,9 @@
   text-align: center;
   color: #172b4d;
 }
-
 #contact .form {
   margin-top: 2rem;
 }
-
 #contact .form .fieldset {
   display: flex;
   flex-direction: column;
@@ -259,33 +234,34 @@
   width: 90%;
   margin: 0.5rem;
 }
-
+#contact .form .fieldset .input-grp .err {
+  color: red;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  top: -2.3rem;
+  left: 70%;
+}
 #contact .form .fieldset textarea {
   width: 95%;
 }
-
 #contact .form .fieldset textarea:valid {
   border-color: #0caa0c;
 }
-
 #contact .form .fieldset textarea:focus {
   outline: none;
 }
-
 #contact .form .fieldset input {
   width: 95%;
   margin: 0.5rem 0;
   padding: 0.5rem;
 }
-
 #contact .form .fieldset input:valid {
   border-color: #0caa0c;
 }
-
 #contact .form .fieldset input:focus {
   outline: none;
 }
-
 #contact .form .fieldset .btn {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -301,15 +277,12 @@
   border-radius: 4px;
   margin-top: 1rem;
 }
-
 #contact .form .fieldset .btn:active {
   background: #36b37f;
 }
-
 #contact .form .fieldset .btn:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
 }
-
 #contact .form .fieldset .btn:visited {
   background: #008552;
 }
@@ -320,7 +293,6 @@
   top: 0;
   left: 5%;
 }
-
 .popup #popup {
   display: flex;
   flex-direction: column;
@@ -328,7 +300,6 @@
   background-color: #fff;
   margin: 0 1rem;
 }
-
 .popup #popup .fa-x {
   font-size: 1.5rem;
   align-self: end;
@@ -339,26 +310,21 @@
   padding: 0.5rem;
   border-radius: 5px;
 }
-
 .popup #popup .popimg {
   width: 100%;
 }
-
 .popup #popup .popimg .imgDesk {
   display: none;
 }
-
 .popup #popup .popimg .imgMob {
   width: 100%;
   height: 190px;
 }
-
 .popup #popup .poptext .popHead {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .popup #popup .poptext .popTtl {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -367,12 +333,10 @@
   line-height: 28px;
   color: #172b4d;
 }
-
 .popup #popup .poptext .btns {
   display: flex;
   justify-content: space-around;
 }
-
 .popup #popup .poptext .btns .btn {
   background: #36b37f;
   color: #fff;
@@ -381,11 +345,9 @@
   margin-top: 1rem;
   width: 141px;
 }
-
 .popup #popup .poptext .topBtns {
   display: none;
 }
-
 .popup #popup .poptext .topBtns .btn {
   background: #36b37f;
   color: #fff;
@@ -394,12 +356,10 @@
   margin-top: 1rem;
   width: 141px;
 }
-
 .popup #popup .popLinks {
   display: flex;
   margin-top: 0.4rem;
 }
-
 .popup #popup .popLinks li {
   margin: 0.5rem;
   border-radius: 5px;
@@ -407,11 +367,9 @@
   padding: 0.5rem;
   color: #344563;
 }
-
 .popup #popup .popLinks .link {
   display: none;
 }
-
 .popup #popup .popPara {
   margin-top: 0.35rem;
   font-family: "Inter", sans-serif;
@@ -421,7 +379,6 @@
   line-height: 20px;
   color: #344563;
 }
-
 .popup.open {
   display: flex;
 }
@@ -437,7 +394,6 @@
   width: 100%;
   height: 100%;
 }
-
 #about .about-des {
   margin-top: 3rem;
   background-image: url("./assets/about-left.png");
@@ -449,12 +405,10 @@
   flex-direction: column;
   align-items: center;
 }
-
 #about .about-des .about-ttl {
   display: flex;
   justify-content: center;
 }
-
 #about .about-des .about-ttl h2 {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -463,14 +417,12 @@
   line-height: 52px;
   color: #172b4d;
 }
-
 #about .about-des .about-para {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 #about .about-des .about-para p {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -479,7 +431,6 @@
   line-height: 32px;
   text-align: center;
 }
-
 #about .about-des .about-para button {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -494,19 +445,15 @@
   border-radius: 4px;
   cursor: pointer;
 }
-
 #about .about-des .about-para button:active {
   background: #36b37f;
 }
-
 #about .about-des .about-para button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
 }
-
 #about .about-des .about-para button:visited {
   background: #008552;
 }
-
 #about .experience {
   display: flex;
   flex-direction: column;
@@ -515,7 +462,6 @@
   height: 100%;
   margin-top: 3rem;
 }
-
 #about .experience .about-card {
   display: flex;
   flex-direction: column;
@@ -527,11 +473,9 @@
   margin: 1rem;
   width: 324px;
 }
-
 #about .experience .about-card img {
   margin-top: 1rem;
 }
-
 #about .experience .about-card h3 {
   margin-top: 2rem;
   font-family: "Inter", sans-serif;
@@ -541,7 +485,6 @@
   line-height: 32px;
   color: #172b4d;
 }
-
 #about .experience .about-card ul {
   margin-top: 1.5rem;
   display: flex;
@@ -549,14 +492,12 @@
   justify-content: center;
   align-items: center;
 }
-
 #about .experience .about-card ul li {
   margin: 0.5rem;
   background-color: #fff;
   padding: 0.5rem;
   border-radius: 5px;
 }
-
 #about .experience .about-card ul li a {
   color: #36b37f;
 }
@@ -566,11 +507,9 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 0 1.5rem;
 }
-
 #portfolio.blur {
   filter: blur(5px);
 }
-
 #portfolio .cards {
   grid-column: 1/3;
   display: grid;
@@ -578,7 +517,6 @@
   gap: 2rem;
   margin: 1rem;
 }
-
 #portfolio .cards .card {
   display: flex;
   flex-direction: column;
@@ -587,18 +525,15 @@
   border-radius: 5px;
   height: 500px;
 }
-
 #portfolio .cards .card .img-hdr {
   height: 232px;
   width: 100%;
   background: #ebf0ee;
 }
-
 #portfolio .cards .card .langs {
   display: flex;
   flex-direction: column;
 }
-
 #portfolio .cards .card .langs h3 {
   margin-top: 2rem;
   font-family: "Poppins", sans-serif;
@@ -609,23 +544,19 @@
   text-align: center;
   color: #3a4a42;
 }
-
 #portfolio .cards .card .langs .cd-links {
   display: flex;
   align-items: center;
 }
-
 #portfolio .cards .card .langs .cd-links li {
   margin: 0.5rem;
   border-radius: 5px;
   background: #ebf0ee;
   padding: 0.5rem;
 }
-
 #portfolio .cards .card .langs .cd-links li a {
   color: #3a4a42;
 }
-
 #portfolio .cards .card .langs button {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -641,15 +572,12 @@
   background: #36b37f;
   border: none;
 }
-
 #portfolio .cards .card .langs button:active {
   background: #36b37f;
 }
-
 #portfolio .cards .card .langs button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.34);
 }
-
 #portfolio .cards .card .langs button:visited {
   background: #008552;
 }
@@ -659,12 +587,10 @@
   justify-content: center;
   margin: 2rem 0;
 }
-
 #copyright .copyright {
   display: flex;
   flex-direction: column;
 }
-
 #copyright .copyright .copyright-txt {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -679,16 +605,13 @@
   .hero-intro .title {
     margin: 8rem 3rem 0;
   }
-
   .hero-intro .description {
     margin: 1rem 2rem;
   }
-
   .hero-intro .socials {
     margin-top: 2rem;
   }
 }
-
 @media screen and (min-width: 550px) {
   #contact {
     display: flex;
@@ -696,92 +619,73 @@
     align-items: center;
     margin-top: 3rem;
   }
-
   #contact .contact-para {
     margin: 0 2rem;
   }
-
   #contact .form {
     width: 70vw;
   }
-
   #contact .form fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 0.7rem;
   }
-
   #contact .form fieldset input {
     width: 95%;
   }
-
   #contact .form fieldset #email {
     width: 95%;
   }
-
   #contact .form fieldset .fullN {
     grid-column: 1/3;
     grid-row: 1/2;
   }
-
   #contact .form fieldset .email {
     grid-column: 1/3;
     grid-row: 2/3;
   }
-
   #contact .form fieldset .msg {
     grid-column: 1/3;
     grid-row: 3/4;
   }
-
   .popup #popup {
     margin: 0 2rem;
   }
-
   .popup #popup .popTtl {
     font-size: 32px;
     line-height: 40px;
   }
-
   .popup #popup .popimg .imgMob {
     width: 100%;
     height: 350px;
   }
-
   .popup #popup .poptext .popPara {
     font-size: 16px;
     line-height: 22px;
   }
 }
-
 @media (min-width: 700px) and (max-width: 909px) {
   #portfolio {
     padding: 0 2.5rem;
   }
-
   #portfolio .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-
   #portfolio .cd1 {
     grid-row: 1/2;
     grid-column: 1/2;
   }
-
   #portfolio .cd2 {
     grid-row: 1/2;
     grid-column: 2/3;
   }
-
   #portfolio .about-des {
     background-size: 120px;
   }
-
   #portfolio .about-des .about-para {
     width: 500px;
   }
 }
-
 @media screen and (min-width: 910px) {
   #portfolio {
     display: grid;
@@ -789,77 +693,61 @@
     margin-top: 3rem;
     padding: 0 10rem;
   }
-
   #portfolio .cards {
     grid-column: 1/4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-
   #portfolio .cards .card {
     flex: 1;
   }
-
   #portfolio .cards .card .langs h3 {
     color: #172b4d;
   }
-
   #portfolio .cards .card .langs .cd-links li a {
     color: #172b4d;
   }
-
   #portfolio .ttl {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
     grid-column: 1/4;
   }
-
   #contact {
     margin-top: 3rem;
   }
 }
-
 @media (min-width: 768px) {
   .navlinks {
     display: block;
   }
-
   .logo {
     display: none;
   }
-
   .toggleMenu {
     display: none;
   }
-
   .socials {
     margin-top: 1rem;
   }
-
   .socials a {
     font-size: 2em;
   }
-
   .socials a img {
     height: 1.8rem;
   }
-
   .header-sec {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 72px;
   }
-
   .header-sec .navlinks {
     padding: 1rem;
   }
-
   .header-sec .navlinks ul {
     display: flex;
   }
-
   .header-sec .navlinks ul li {
     font-family: "Inter", sans-serif;
     font-weight: 600;
@@ -867,31 +755,25 @@
     line-height: 20px;
     margin: 0 1rem;
   }
-
   .header-sec .navlinks ul li :hover {
     background-color: #ebf0ee;
   }
-
   .header-sec .navlinks ul li a {
     padding: 0.8rem;
     border-radius: 5px;
     color: #172b4d;
   }
-
   .hero-intro {
     background-image: none;
   }
-
   .hero-intro .title {
     margin-top: 7rem;
   }
-
   .hero-intro .description {
     width: 800px;
     margin: 2rem;
     padding: 0 2rem;
   }
-
   .hero {
     background-image: url("./assets/header-bg.png");
     background-repeat: no-repeat;
@@ -899,7 +781,6 @@
     height: 120vh;
     width: 100%;
   }
-
   #about {
     background-image: url("./assets/about-right.png");
     background-repeat: no-repeat;
@@ -909,7 +790,6 @@
     display: flex;
     flex-direction: column;
   }
-
   #about .about-des {
     background-image: url("./assets/about-left.png");
     background-repeat: no-repeat;
@@ -919,13 +799,11 @@
     flex-direction: column;
     height: 100%;
   }
-
   #about .about-des .about-ttl {
     display: flex;
     align-self: center;
     margin-top: 3rem;
   }
-
   #about .about-des .about-ttl h2 {
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -934,7 +812,6 @@
     line-height: 52px;
     color: #172b4d;
   }
-
   #about .about-des .about-para {
     display: flex;
     align-self: center;
@@ -942,7 +819,6 @@
     margin: 2rem 4rem;
     width: 80%;
   }
-
   #about .about-des .about-para p {
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -952,7 +828,6 @@
     color: #172b4d;
     text-align: center;
   }
-
   #about .about-des .about-para button {
     margin-top: 2rem;
     font-family: "Inter", sans-serif;
@@ -968,7 +843,6 @@
     border: none;
     border-radius: 4px;
   }
-
   #about .experience {
     display: flex;
     flex-direction: row;
@@ -976,7 +850,6 @@
     padding: 5rem;
     margin: 2rem 4rem;
   }
-
   #about .experience .about-card {
     display: flex;
     flex-direction: column;
@@ -986,13 +859,11 @@
     border-radius: 10px;
     margin: 0.5rem;
   }
-
   #about .experience .about-card img {
     width: 200px;
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
-
   #about .experience .about-card h3 {
     margin-top: 2rem;
     font-family: "Inter", sans-serif;
@@ -1002,7 +873,6 @@
     line-height: 32px;
     color: #172b4d;
   }
-
   #about .experience .about-card ul {
     margin-top: 1.5rem;
     display: flex;
@@ -1010,18 +880,15 @@
     justify-content: center;
     align-items: center;
   }
-
   #about .experience .about-card ul li {
     margin: 0.5rem;
     background-color: #fff;
     padding: 0.5rem;
     border-radius: 5px;
   }
-
   #about .experience .about-card ul li a {
     color: #36b37f;
   }
-
   #contact {
     display: flex;
     flex-direction: row;
@@ -1032,7 +899,6 @@
     background-position: bottom left;
     margin-top: 3rem;
   }
-
   #contact .pri-text {
     justify-content: start;
     margin-left: 7rem;
@@ -1043,12 +909,10 @@
     background-size: 130px;
     background-position: bottom center;
   }
-
   #contact .pri-text .contact-para {
     text-align: center;
     margin-top: 5rem;
   }
-
   #contact .form {
     width: 65%;
     height: 450px;
@@ -1057,16 +921,13 @@
     background-size: 100px;
     background-position: bottom right;
   }
-
   #contact .form fieldset {
     width: 70%;
   }
-
   .copyright .copyright-txt {
     display: none;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 910px) {
   .popup {
     display: none;
@@ -1075,52 +936,41 @@
     top: 0;
     left: 0;
   }
-
   .popup #popup {
     width: 750px;
   }
-
   .popup #popup .popimg .imgMob {
     display: none;
   }
-
   .popup #popup .popimg .imgDesk {
     display: block;
     width: 750px;
     height: 450px;
   }
-
   .popup #popup .poptext .popHead {
     width: 98%;
   }
-
   .popup #popup .poptext .popHead .popTtl {
     width: 55%;
   }
-
   .popup #popup .poptext .popHead .topBtns {
     display: flex;
     justify-content: space-between;
     width: 40%;
   }
-
   .popup #popup .poptext .popLinks .link {
     display: block;
   }
-
   .popup #popup .poptext .popPara {
     width: 97%;
   }
-
   .popup #popup .poptext .btns {
     display: none;
   }
-
   .popup.open {
     display: flex;
   }
 }
-
 @media screen and (min-width: 911px) {
   .popup {
     display: none;
@@ -1129,54 +979,43 @@
     top: 0;
     left: 5%;
   }
-
   .popup #popup {
     width: 900px;
   }
-
   .popup #popup .popimg .imgMob {
     display: none;
   }
-
   .popup #popup .popimg .imgDesk {
     display: block;
     width: 100%;
     height: 450px;
   }
-
   .popup #popup .poptext .popHead {
     width: 98%;
   }
-
   .popup #popup .poptext .popHead .popTtl {
     width: 55%;
   }
-
   .popup #popup .poptext .popHead .topBtns {
     display: flex;
     justify-content: space-between;
     width: 40%;
   }
-
   .popup #popup .poptext .popLinks .link {
     display: block;
   }
-
   .popup #popup .poptext .popPara {
     width: 97%;
   }
-
   .popup #popup .poptext .btns {
     display: none;
   }
-
   .popup.open {
     display: flex;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .popup {
     left: 25%;
   }
-}
+}/*# sourceMappingURL=styles.css.map */

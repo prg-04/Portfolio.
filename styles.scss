@@ -266,6 +266,17 @@ $secondary: #172b4d;
       width: 90%;
       margin: 0.5rem;
 
+      .input-grp {
+        .err {
+          color: red;
+          font-size: 0.8rem;
+          position: relative;
+          z-index: 10;
+          top: -2.3rem;
+          left: 70%;
+        }
+      }
+
       textarea {
         width: 95%;
 
